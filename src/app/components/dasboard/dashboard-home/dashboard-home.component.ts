@@ -4,10 +4,8 @@ import { filter } from 'rxjs/operators'
 import { Subscription } from 'rxjs';
 import { Router,  NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
-import { DashboardProfileComponent } from '../dashboard-profile/dashboard-profile.component';
-import { DashboardUsersComponent } from '../dashboard-users/dashboard-users.component';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-import { DashboardHistoryComponent } from '../dashboard-history/dashboard-history.component';
+
 
 @Component({
   selector: 'app-dashboard-home',
@@ -44,15 +42,16 @@ this.sharedService.activityInfo.showArrowBack = false;
       this.breakpointObserver
       .observe(['(max-width: 767px)'])
       .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this.isHandset = true;
-          // this.siteVersion = DashboardUsersComponent;
-          this.siteVersion = DashboardHistoryComponent;
-        } else {
-          this.isHandset = false;
-          this.siteVersion = DashboardProfileComponent;
-          // this.siteVersion = DashboardUsersComponent;
-        }
+        
+        // if (state.matches) {
+        //   this.isHandset = true;
+        //   // this.siteVersion = DashboardUsersComponent;
+        //   this.siteVersion = DashboardHistoryComponent;
+        // } else {
+        //   this.isHandset = false;
+        //   this.siteVersion = DashboardProfileComponent;
+        //   // this.siteVersion = DashboardUsersComponent;
+        // }
       });
     }
 

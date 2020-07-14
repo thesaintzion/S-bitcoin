@@ -6,14 +6,6 @@ import { DashboardLayoutComponent } from '../_layouts/dashboard-layout/dashboard
 import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { QuillModule } from 'ngx-quill';
-import { DashboardAllBlogsComponent } from './dashboard-all-blogs/dashboard-all-blogs.component';
-import { DashboardUsersComponent } from './dashboard-users/dashboard-users.component';
-import { DashboardProfileComponent } from './dashboard-profile/dashboard-profile.component';
-import { DashboardViewPhotoComponent } from './dashboard-view-photo/dashboard-view-photo.component';
-import { DashboardUserProfileComponent } from './dashboard-user-profile/dashboard-user-profile.component';
-import { DashboardChatComponent } from './dashboard-chat/dashboard-chat.component';
-import { DasboardChatMessageBoxComponent } from './dashboard-chat/dasboard-chat-message-box/dasboard-chat-message-box.component';
-import { DashboardHistoryComponent } from './dashboard-history/dashboard-history.component';
 import { VoiceCallDialogComponent } from './_dialogs/voice-call-dialog/voice-call-dialog.component';
 import { VideoCallDialogComponent } from './_dialogs/video-call-dialog/video-call-dialog.component';
 import { ScreenShareDialogComponent } from './_dialogs/screen-share-dialog/screen-share-dialog.component';
@@ -32,14 +24,6 @@ import { PackagesComponent } from './_plans_packages/packages/packages.component
   declarations: [
     DashboardLayoutComponent,
     DashboardHomeComponent,
-    DashboardAllBlogsComponent,
-    DashboardUsersComponent,
-    DashboardProfileComponent,
-    DashboardViewPhotoComponent,
-    DashboardUserProfileComponent,
-    DashboardChatComponent,
-    DasboardChatMessageBoxComponent,
-    DashboardHistoryComponent,
     VoiceCallDialogComponent,
     VideoCallDialogComponent,
     ScreenShareDialogComponent,
