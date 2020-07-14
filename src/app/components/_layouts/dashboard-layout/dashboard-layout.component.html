@@ -1,0 +1,89 @@
+<mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #drawer class="sidenav shadow-sm border-0" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar class=" bg-linear shadow-none text-white  pl-0 pr-0">
+            <!-- routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}" -->
+            <div class="d-flex justify-content-between align-items-center align-content-center w-100">
+                <div class="loggedin-user">
+                    <mat-list>
+                        <a mat-list-item>
+                            <mat-icon mat-list-icon></mat-icon>
+                            <span mat-line class="text-white">Saint Stephen</span>
+                        </a>
+                    </mat-list>
+                </div>
+                <div>
+                    <button mat-icon-button>
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </mat-toolbar>
+
+        <div class="mat-sidenav-inner-con">
+            <mat-tab-group dynamicHeight>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <div class="color-orange">HISTORY</div>
+                    </ng-template>
+                    <div class="tab-content">
+                        <app-dashboard-history></app-dashboard-history>
+                    </div>
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                        <div class="color-orange">USERS</div>
+                    </ng-template>
+                    <div class="tab-content">
+                        <!-- Users -->
+                        <app-dashboard-users></app-dashboard-users>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+
+            <div class="sidenav-action">
+                <button class="btn-linear add-btn text-white shadow" mat-icon-button mat-raised-button>
+                    <mat-icon>color_lens</mat-icon>
+        </button>
+
+
+
+                <!-- <button  className="btn add-btn  shadow d-flex align-items-center justify-content-center rounded-circle">
+            <i className="fa fa-plus"></i>
+        </button> -->
+
+            </div>
+        </div>
+    </mat-sidenav>
+
+
+
+    <mat-sidenav-content class="content position-relative" [ngClass]="isHandset? 'bg-white mobile ': 'dashboard-bg'">
+
+        <header class="mobile-header" *ngIf="isHandset">
+            <mat-toolbar class="shadow-s bg-white">
+                <div class="d-flex justify-content-between align-items-center align-content-center w-100">
+                    <button mat-icon-button [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/app">
+                        <mat-icon>home</mat-icon>
+                    </button>
+                    <button mat-icon-button routerLinkActive="active" routerLink="users">
+                        <mat-icon>group</mat-icon>
+                    </button>
+                    <button mat-icon-button routerLinkActive="active" routerLink="profile">
+                        <mat-icon>person</mat-icon>
+                    </button>
+                    <button mat-icon-button>
+                        <mat-icon>search</mat-icon>
+                    </button>
+                </div>
+            </mat-toolbar>
+        </header>
+
+        <div [ngClass]="isHandset? '': ''">
+            <router-outlet>
+            </router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

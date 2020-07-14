@@ -1,0 +1,13 @@
+:host ::ng-deep {
+    td:first-child {
+        display: none;
+        color: red;
+    }
+    tr {
+        width: 33%;
+        float: left;
+    }
+    .mat-dialog-actions {
+        border-top: 1px solid #eee;
+    }
+}

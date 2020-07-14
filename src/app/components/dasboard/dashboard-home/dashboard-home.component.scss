@@ -1,0 +1,83 @@
+:host ::ng-deep {
+    $pink: #FD287B;
+    $orange: #FF7058;
+    $home_page_bg: #C4C4C4;
+    $dashbord_bg: #F5F7FA;
+    // .mat-toolbar {
+    //     background: $dashbord_bg !important;
+    //     position: sticky;
+    //     top: 0;
+    //     z-index: 1;
+    //     height: 56px;
+    // }
+    .router-con {
+        min-height: 100vh;
+    }
+    header.mobile-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        .mat-toolbar {
+            height: 56px;
+            // background-color: transparent;
+            // background-color: $home_page_bg;
+            .mat-icon {
+                color: #dadfe6;
+                font-size: 30px;
+                width: 30px;
+                height: 30px;
+                vertical-align: middle;
+                // color: red;
+            }
+        }
+    }
+    .mobil {
+        .mat-list-item {
+            margin-bottom: 15px;
+            .fancy-icon {
+                background-color: $home_page_bg;
+                ;
+                height: 40px;
+                width: 40px;
+                line-height: 30px;
+            }
+            .fancy-text {
+                height: 10px;
+                background-color: $home_page_bg;
+                ;
+                display: inline-block;
+                margin-left: 10px;
+                width: 95%;
+                border-radius: 30px;
+                // border-radius: 60px;
+            }
+            .fancy-text.two {
+                width: 70%;
+            }
+            &:hover {
+                .fancy-icon,
+                .fancy-text {
+                    background-color: $home_page_bg;
+                    ;
+                }
+            }
+        }
+    }
+    h1 {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: bold;
+        // font-size: 25px;
+        border-left: 6px solid $pink;
+        padding-left: 15px;
+        color: rgba(0, 0, 0, 40%);
+        // text-align: center;
+    }
+    @media (max-width:767px) {
+        // header {
+        //     .mat-toolbar {
+        //         height: 40px;
+        //     }
+        // }
+    }
+}

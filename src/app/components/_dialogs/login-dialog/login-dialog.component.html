@@ -1,0 +1,171 @@
+<!-- ADD AND EDIT ACCOUNT -->
+
+<div>
+    <div mat-dialog-title>
+        <div class="text-center position-relative w-100">
+            <div class="position-absolute left-0 top-0">
+                <button mat-dialog-close  tabindex="-1" mat-icon-button>
+                    <mat-icon class="color-lighter-gray float-left">arrow_back</mat-icon>
+                </button>
+
+
+            </div>
+
+            <img class="logo" src="../../../../assets/img/logo-color.svg">
+        </div>
+    </div>
+
+    <div mat-dialog-content>
+        <div class="content-header mb-3">
+
+            <div class="animated fadeInLeft" *ngIf="createAccount else showSocialBtns">
+                <mat-tab-group dynamicHeight>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <div class="color-orange">LOGIN</div>
+                        </ng-template>
+                        <div class="tab-content ">
+                            <form  [formGroup]="userLoginForm" (ngSubmit)="onUserLoginFormSubmit()">
+                                <div>
+                                    <mat-form-field appearance="legacy"  class="w-100">
+                                        <mat-label>User Name</mat-label>
+                                        <input matInput formControlName="username" placeholder="Type Username">
+                                        <mat-icon matSuffix class="text-muted">person</mat-icon>
+                                      </mat-form-field>
+        
+                                      <mat-form-field appearance="legacy"  class="w-100">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput type="password" formControlName="password" placeholder="Type Password">
+                                        <mat-icon matSuffix  class="text-muted">security</mat-icon>
+                                      </mat-form-field>
+                                </div>
+            
+                                <div class="d-flex justify-content-end w-100">
+                                    <button mat-button type="reset" class="btn-rounded mt-2">Cancel</button>
+                                    <button mat-raised-button  class="btn-rounded mt-2 bg-linear text-white">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </mat-tab>
+                    <mat-tab>
+                        <ng-template mat-tab-label>
+                            <div class="color-orange">REGISTER</div>
+                        </ng-template>
+                        <div class="tab-content">
+                           
+                            <form  [formGroup]="userForm" (ngSubmit)="onUserFormSubmit()">
+                                <div>
+                                    <mat-form-field appearance="legacy"  class="w-100">
+                                        <mat-label>User Name</mat-label>
+                                        <input matInput formControlName="username" placeholder="Type Username">
+                                        <mat-icon matSuffix class="text-muted">person</mat-icon>
+                                        <!-- <mat-hint class="text-dangerd">Hint</mat-hint> -->
+                                      </mat-form-field>
+            
+                                      <mat-form-field appearance="legacy"  class="w-100">
+                                        <mat-label>Email</mat-label>
+                                        <input matInput formControlName="email" placeholder="Type Email">
+                                        <mat-icon matSuffix  class="text-muted">mail</mat-icon>
+                                        <!-- <mat-hint class="text-danger">Hint</mat-hint> -->
+                                      </mat-form-field>
+            
+                                      <mat-form-field appearance="legacy"  class="w-100">
+                                        <mat-label>Password</mat-label>
+                                        <input matInput formControlName="password" placeholder="Type Password">
+                                        <mat-icon matSuffix  class="text-muted">security</mat-icon>
+                                        <!-- <mat-hint class="text-danger">Hint</mat-hint> -->
+                                      </mat-form-field>
+                                </div>
+            
+                                <div class="d-flex justify-content-end w-100">
+                                    <button mat-button type="reset" class="btn-rounded mt-2">Cancel</button>
+                                    <button mat-raised-button  class="btn-rounded mt-2 bg-linear text-white">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+          
+            <ng-template #showSocialBtns>
+            <div *ngIf="!loggedIn">
+                <h3 class="mb-4">LET’S GET YOU IN</h3>
+                <p class="mb-5">By clicking log in, you agree to our <a href="#" class="text-underline">Terms</a>. See how we manage your data in our <a href="#" class="text-underline">Privacy Policy</a> and
+                    <a href="#" class="text-underline">Cookie Policy</a>.</p>
+                <!-- mat-dialog-close -->
+                <button (click)="signInWithGoogle()" mat-raised-button class="btn-rounded border w-100 mb-3 position-relative">
+<div class="position-absolute left-0 top-0">
+<img  src="../../../../assets/img/google.svg">
+</div>
+<span>
+Login with Google
+</span>
+</button>
+                <button (click)="signInWithFB()" mat-raised-button class="btn-rounded border w-100 position-relative mb-3">
+    <div class="position-absolute left-0 top-0">
+    <img  src="../../../../assets/img/facebook.svg">
+    </div>
+    <span>
+    Login with Facebook
+    </span>
+</button>
+
+
+                <a target="_blank" (click)="alert('hey')" mat-raised-button class="btn-rounded border w-100 position-relative mb-4">
+                    <div class="position-absolute left-0 top-0">
+                        <img width="18" src="../../../../assets/img/github.svg">
+                    </div>
+                    <span>
+    Login with Github
+    </span>
+                </a>
+
+
+                <h3 class="text-center">OR</h3>
+
+
+                <a target="_blank" (click)="createAccount = true"  mat-raised-button class="btn-rounded bg-linear text-white w-100 position-relative mb-4">
+                    <div class="position-absolute left-0 top-0">
+                        <img width="18" src="../../../../assets/img/logo-white.svg">
+                    </div>
+                    <span>
+    Login with username
+    </span>
+                </a>
+
+
+            </div>
+        </ng-template>
+            <div *ngIf="loggedIn" [ngClass]="user?.provider === 'GOOGLE'? 'text-dange': 'text-primar'" class="text-center  py-4">
+                <img width="50" class="mx-auto rounded-circle shadow" src="{{ user?.photoUrl }}">
+                <div>
+                    <h4>{{ user?.name }}</h4>
+                    <span>{{ user?.email }}</span>
+                </div>
+                <div>
+                    <button (click)="signOut()" mat-raised-button color="warn" class="btn-rounded mt-2">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="content-footer mb-3 text-center">
+            <h3 class="mb-4">MOBILE APP</h3>
+            <button  mat-raised-button class="color-lighter-gray btn-rounded">Coming Soon!!</button>
+        </div> -->
+    </div>
+
+
+
+
+    <!-- <div mat-dialog-actions>
+        <div class=" d-flex justify-content-end w-100">
+            <div>
+                <button class="btn-light-primary" tabindex="-1" mat-dialog-close mat-raised-button>Cancel</button>
+            </div>
+            <div class="ml-3">
+                <button class="btn-primary" tabindex="-1" mat-raised-button>Save Transaction</button>
+            </div>
+        </div>
+    </div> -->
+
+</div>

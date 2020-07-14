@@ -1,0 +1,15 @@
+<!--  -->
+<p mat-dialog-title>
+    <button (click)="_bottomSheetRef.dismiss()" mat-icon-button class="color-gray">
+        <mat-icon>keyboard</mat-icon>
+    </button>
+
+    <button (click)="_bottomSheetRef.dismiss()" mat-icon-button class="color-pink ml-4">
+        <mat-icon>tag_faces</mat-icon>
+    </button>
+</p>
+<mat-dialog-content class="b">
+    <button class="color-pink" (click)="openLink(icon)" [matTooltip]="icon" matTooltipColor="#ffffff" tabindex="-1" mat-icon-button *ngFor="let icon of iconArray">
+<mat-icon>{{icon}}</mat-icon>
+</button>
+</mat-dialog-content>

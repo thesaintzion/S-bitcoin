@@ -1,0 +1,30 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Title one",
+      "body": "Body on article one Body on article one Body on article one"
+    },
+    {
+      "id": 2,
+      "title": "Title two",
+      "body": "Body on article two Body on article one Body on article two"
+    },
+    {
+      "id": 3,
+      "title": "Title three",
+      "body": "Body on article two Body on article the Body on article three"
+    },
+    {
+      "id": 4,
+      "title": "Title four",
+      "body": "Body on article four Body on article the Body on article four"
+    },
+    {
+      "id": "123",
+      "body": "Body on article two Body on article.",
+      "title": "Title 4"
+    }
+  ],
+  "users": []
+}

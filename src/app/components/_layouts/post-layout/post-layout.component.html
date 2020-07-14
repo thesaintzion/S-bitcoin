@@ -1,0 +1,26 @@
+<div class="dashboard-bg  post">
+    <header>
+        <mat-toolbar class=" main shadow-sm p-0">
+            <div class="container-fluid">
+                <div class="d-flex justify-content-between w-100">
+                    <div class="d-flex align-content-center align-items-center">
+                        <button *ngIf="sharedService.activityInfo.showArrowBack" tabindex="-1" type="button" aria-label="GO BACK" class="color-pink mr-3 " mat-icon-button (click)="location.back()">
+                <mat-icon class="text-bolder">arrow_back_ios</mat-icon>
+                </button>
+                        <p class="mb-0 text-bolder d-flex align-content-center align-items-center">
+                            NGRX
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </mat-toolbar>
+    </header>
+
+    <div class="outlet-con">
+        <router-outlet></router-outlet>
+    </div>
+
+    <footer>
+        <h5>Footer</h5>
+    </footer>
+</div>

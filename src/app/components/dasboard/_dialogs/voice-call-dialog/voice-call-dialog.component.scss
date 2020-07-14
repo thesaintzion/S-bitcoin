@@ -1,0 +1,22 @@
+header {
+    .mat-icon {
+        vertical-align: middle;
+    }
+}
+
+.content {
+    .mat-icon {
+        vertical-align: middle;
+        font-size: 60px;
+        height: 60px;
+        width: 60px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
