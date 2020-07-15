@@ -19,6 +19,9 @@ export class DashboardLayoutComponent implements OnInit {
   isHandset$: Observable<boolean>
   isHandset = false;
   users = [];
+  account;
+  plans;
+  others;
 
   constructor(
      private breakpointObserver: BreakpointObserver,
@@ -27,6 +30,75 @@ export class DashboardLayoutComponent implements OnInit {
      private meta: Meta,
      private apiService: ApiService,
      ) {
+
+      this.account = [
+        {
+          name: 'Profile Settings',
+          icon: 'person',
+          iconClass: '',
+          link: ''
+        },
+        {
+          name: 'Upgrade Account',
+          icon: 'account_balance_wallet',
+          iconClass: '',
+          link: ''
+        }
+      ];
+      this.plans = [
+        {
+          name: 'Investment Plans',
+          icon: 'account_balance_wallet',
+          iconClass: '',
+          link: ''
+        },
+        {
+          name: 'Packages',
+          icon: 'account_balance_wallet',
+          iconClass: '',
+          link: ''
+        }
+      ];
+
+      this.others = [
+        {
+          name: 'Deposites',
+          icon: 'add_box',
+          iconClass: '',
+          link: ''
+        },
+        {
+          name: 'Withdrawals',
+          icon: 'monetization_on',
+          iconClass: 'text-primary',
+          link: ''
+        },
+        {
+          name: 'Transaction Logs',
+          icon: 'timelapse',
+          iconClass: '',
+          link: ''
+        },
+        {
+          name: 'Packages',
+          icon: 'monetization_on',
+          iconClass: 'text-success',
+          link: ''
+        },
+        {
+          name: 'Refer a User',
+          icon: 'group',
+          iconClass: 'text-primary',
+          link: ''
+        },
+        {
+          name: 'Packages',
+          icon: 'account_balance_wallet',
+          iconClass: '',
+          link: ''
+        }
+      ];
+
        let items = [
          {},{},{},{},{},{}
         ]

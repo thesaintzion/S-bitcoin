@@ -1,17 +1,15 @@
 <mat-sidenav-container class="sidenav-container">
 
-    <mat-sidenav #drawer class="sidenav shadow-sm border-0" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-        <mat-toolbar class=" bg-linear shadow-none text-white  pl-0 pr-0">
+    <mat-sidenav #drawer class="sidenav shadow border-0" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <mat-toolbar class="shadow-sm pl-0 pr-0">
             <!-- routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}" -->
             <div class="d-flex justify-content-between align-items-center align-content-center w-100">
-                <div class="loggedin-user">
-                    <mat-list>
+                <div>
                         <a mat-list-item>
-                            <mat-icon mat-list-icon></mat-icon>
-                            <span mat-line class="text-white">Saint Stephen</span>
+                          <img class="logo" mat-line src="../../../../assets/img/logo-1.svg">
+                            <span mat-line  class="logo-name">Bitcoin Easy</span>
                         </a>
-                    </mat-list>
                 </div>
                 <div>
                     <button mat-icon-button>
@@ -21,61 +19,64 @@
             </div>
         </mat-toolbar>
 
-        <div class="mat-sidenav-inner-con">
-            <mat-tab-group dynamicHeight>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <div class="color-orange">HISTORY</div>
-                    </ng-template>
-                    <div class="tab-content">
-                        <app-dashboard-history></app-dashboard-history>
-                    </div>
-                </mat-tab>
-                <mat-tab>
-                    <ng-template mat-tab-label>
-                        <div class="color-orange">USERS</div>
-                    </ng-template>
-                    <div class="tab-content">
-                        <!-- Users -->
-                        <app-dashboard-users></app-dashboard-users>
-                    </div>
-                </mat-tab>
-            </mat-tab-group>
+        <mat-list>
+            <a mat-list-item  routerLink="/app">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <div mat-line>Dashboard</div>
+              </a>
+              <mat-divider></mat-divider>
+            <a mat-list-item  [routerLink]="accnt.link" *ngFor="let accnt of account">
+              <mat-icon  mat-list-icon>{{accnt.icon}}</mat-icon>
+              <div mat-line>{{accnt.name}}</div>
+            </a>
+            <mat-divider></mat-divider>
+        
+            <mat-list-item *ngFor="let plan of plans ">
+              <mat-icon mat-list-icon>{{plan.icon}}</mat-icon>
+              <div mat-line>{{plan.name}}</div>
+            </mat-list-item>
 
+            <mat-divider></mat-divider>
+            <a  mat-list-item *ngFor="let other of others">
+                    <div mat-list-icon>
+                        <mat-icon [ngClass]="other.iconClass" >{{other.icon}}</mat-icon>
+                </div>
+                        <div mat-line>{{other.name}}</div>
+           
+              </a>
+          </mat-list>
+
+
+        <div class="mat-sidenav-inner-con">
             <div class="sidenav-action">
-                <button class="btn-linear add-btn text-white shadow" mat-icon-button mat-raised-button>
+                <button class="bg-yellow add-btn text-black shadow" mat-icon-button mat-raised-button>
                     <mat-icon>color_lens</mat-icon>
         </button>
-
-
-
-                <!-- <button  className="btn add-btn  shadow d-flex align-items-center justify-content-center rounded-circle">
-            <i className="fa fa-plus"></i>
-        </button> -->
-
             </div>
         </div>
     </mat-sidenav>
 
 
 
-    <mat-sidenav-content class="content position-relative" [ngClass]="isHandset? 'bg-white mobile ': 'dashboard-bg'">
-
-        <header class="mobile-header" *ngIf="isHandset">
-            <mat-toolbar class="shadow-s bg-white">
+    <mat-sidenav-content class="position-relative" [ngClass]="isHandset? '': ''">
+        <header class="mian-header">
+            <mat-toolbar class="shadow-sm">
                 <div class="d-flex justify-content-between align-items-center align-content-center w-100">
-                    <button mat-icon-button [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/app">
-                        <mat-icon>home</mat-icon>
-                    </button>
-                    <button mat-icon-button routerLinkActive="active" routerLink="users">
-                        <mat-icon>group</mat-icon>
-                    </button>
-                    <button mat-icon-button routerLinkActive="active" routerLink="profile">
-                        <mat-icon>person</mat-icon>
-                    </button>
-                    <button mat-icon-button>
-                        <mat-icon>search</mat-icon>
-                    </button>
+                    <div>
+                        <button mat-icon-button  routerLinkActive="active" routerLink="/app">
+                            <!-- <mat-icon class="color-orange">home</mat-icon> -->
+                        </button>
+                    </div>
+                   
+                    <div>
+                        <button class="bg-yellow" mat-icon-button mat-raised-button routerLinkActive="active" routerLink="users">
+                            <!-- <mat-icon>group</mat-icon> -->
+                        </button>
+                        <button class="ml-3 bg-yellow" mat-icon-button mat-raised-button routerLink="profile">
+                            <!-- <mat-icon>person</mat-icon> -->
+                        </button>
+                    </div>
+                   
                 </div>
             </mat-toolbar>
         </header>
@@ -84,6 +85,11 @@
             <router-outlet>
             </router-outlet>
         </div>
+
+
+        <footer class="px-4 mt-5">
+            <p> &copy; Bitcoin App, 2020</p>
+        </footer>
 
     </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,46 +1,32 @@
-<div class="home-page home-page-bg">
-    <header>
-        <mat-toolbar class="main">
-            <div class="container-fluid w-100">
-                <div class="d-flex justify-content-between w-100">
-                    <div class="d-flex align-content-center align-items-center align-content-center  header-logo">
-                        <img class="logo" src="../../../assets/img/logo-white.svg">
-                        <h3 class="mb-0 text-bolder text-white">
-                            St. ChatApp
-                        </h3>
-                    </div>
-
-
-
-                    <div class="d-flex d-flex align-content-center align-items-center ">
-                        <button (click)="handleLogin()" tabindex="-1" type="button" class="btn-rounded bg-white color-pink text-bolder px-4 mr-4 hide-mobile " mat-button>
-                        Log In
-                        </button>
-
-                        <!-- <a [disabled]="!url" href="{{url}}" tabindex="-1" type="button" [ngClass]="!url? 'color-gray': 'color-pink'" class="btn-rounded bg-white  text-bolder px-4 mr-4 hide-mobile " mat-button>
-                            {{!url? 'Please Wait..': 'Login'}}
-                        </a> -->
-
-                           <!-- <a  href="http://localhost:3600/auth/facebook" tabindex="-1" type="button" [ngClass]="!url? 'color-gray': 'color-pink'" class="btn-rounded bg-white  text-bolder px-4 mr-4 hide-mobile " mat-button>
-                            Login with google
-                        </a>
-                         -->
-
-                        <button tabindex="-1" type="button" aria-label="Toggle sidenav" mat-icon-button>
-                        <mat-icon  style="font-weight: border" class="text-white">menu</mat-icon>
-                        </button>
-
-                    </div>
-
-
+<div class="home-page">
+    <header class="mian-header">
+        <mat-toolbar>
+            <div class="d-flex justify-content-between align-items-center align-content-center w-100">
+                <div>
+                    <a mat-icon-button  routerLinkActive="active" routerLink="/app">
+                        <img class="home-logo" src="../../../../assets/img/logo-1.svg">
+                    </a>
                 </div>
+               
+                <div>
+                    <button class="ml-3 btn-rounded" routerLink="/app"  mat-raised-button >
+                        <mat-icon>security</mat-icon> Login
+                    </button>
+                    <button class="ml-3 btn-rounded"  routerLink="/app" mat-raised-button >
+                        <mat-icon>person</mat-icon> Rigister
+                    </button>
+                </div>
+               
             </div>
         </mat-toolbar>
     </header>
 
-    <footer class="text-center">
-        <button (click)="handleLogin()" tabindex="-1" type="button" class="btn-rounded bg-white color-pink text-bolder px-5 hide-desktop" mat-button>
-            Log In
-        </button>
-    </footer>
+    <div class="home-slide-con">
+        <app-home-slide></app-home-slide>
+    </div>
+
+<!-- <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22utm_source%22%3A%22www.accounts.millenniumcryptotrade2.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D" 
+style="box-sizing: border-box; height: calc(100% - 32px); width: 100%;"></iframe> -->
+
+
 </div>

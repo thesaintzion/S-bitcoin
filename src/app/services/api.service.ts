@@ -5,7 +5,7 @@ import * as io from 'socket.io-client';
 import { Observable } from 'rxjs';
 import { delay } from 'rxjs/operators';
 import { ArticleModel } from '../_ngrx-store/models/aricle.model';
-import { messageModel } from '../components/quiz/quiz.component';
+
 
 
 @Injectable({

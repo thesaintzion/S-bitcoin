@@ -21,6 +21,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { AuthenticationService } from './services/authentication.service';
 import { UserContextComponent } from './components/_dialogs/user-context/user-context.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { HomeSlideComponent } from './components/main/home-slide/home-slide.component';
  
  
 const fbLoginOptions: LoginOpt = {
@@ -53,11 +55,14 @@ export function provideConfig() {
     HomePageComponent,
     LoginDialogComponent,
     ScrollUpComponent,
-    UserContextComponent
+    UserContextComponent,
+    HomeSlideComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgbModule,
     BrowserAnimationsModule,
     LayoutModule,
     AppRoutingModule,
