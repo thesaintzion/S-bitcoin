@@ -5,6 +5,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 // import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { ScrollUpComponent } from './components/scroll-up/scroll-up.component';
+import { LoadingLayoutComponent } from './components/loading-layout/loading-layout.component';
 
 
 
@@ -12,7 +13,8 @@ import { ScrollUpComponent } from './components/scroll-up/scroll-up.component';
 @NgModule({
   declarations: [
     // ScrollUpComponent
-  ],
+  LoadingLayoutComponent
+],
   imports: [
     MaterialModule,
     FormsModule,
@@ -29,6 +31,7 @@ import { ScrollUpComponent } from './components/scroll-up/scroll-up.component';
     ReactiveFormsModule,
     HttpClientModule,
     CommonModule,
+    LoadingLayoutComponent
     //  ScrollUpComponent,
     
     

@@ -76,11 +76,11 @@ $yellow: #f3cb00;
 html,
 body {
     height: 100%;
-    background: #fff;
+    background: #000000;
     background-image: url('./assets/img/logo-1.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 10% !important;
+    background-size: 8% !important;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
@@ -88,7 +88,6 @@ body {
     -webkit-animation-name: zoomInUp;
     animation-name: zoomInUp;
     scroll-behavior: smooth;
-    // background-image: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.877)), url('../../../../assets/img/m2.jpg');
 }
 
 * {

@@ -34,7 +34,7 @@ this.sharedService.activityInfo.showArrowBack = false;
     dynamicTitle(){
       this.titleService.setTitle('');
       const appTitle = this.titleService.getTitle();
-      this.titleService.setTitle(`${this.sharedService.activityInfo.name} - Just a Thought`);
+      this.titleService.setTitle(`${this.sharedService.activityInfo.name} - Bitcoin`);
     }
 
     // Handle displayed page

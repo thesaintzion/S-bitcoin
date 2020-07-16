@@ -1,5 +1,5 @@
-<mat-sidenav-container class="sidenav-container">
 
+<mat-sidenav-container class="sidenav-container">
     <mat-sidenav #drawer class="sidenav shadow bor" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar class="shadow-sm pl-0 pr-0">
             <!-- routerLinkActive="active" [routerLinkActiveOptions]="{exact:
@@ -24,23 +24,23 @@
                 <mat-icon class="text-dark" mat-list-icon>home</mat-icon>
                 <div mat-line>Dashboard</div>
               </a>
-              <mat-divider></mat-divider>
+             
             <a mat-list-item  [routerLink]="accnt.link" *ngFor="let accnt of account">
               <mat-icon [ngClass]="accnt.iconClass"  mat-list-icon>{{accnt.icon}}</mat-icon>
               <div mat-line>{{accnt.name}}</div>
             </a>
-            <mat-divider></mat-divider>
+          
         
-            <mat-list-item *ngFor="let plan of plans ">
+            <a mat-list-item [routerLink]="plan.link" *ngFor="let plan of plans">
               <mat-icon [ngClass]="plan.iconClass" mat-list-icon>{{plan.icon}}</mat-icon>
               <div mat-line>{{plan.name}}</div>
-            </mat-list-item>
+            </a>
+       
 
-            <mat-divider></mat-divider>
-            <a  mat-list-item *ngFor="let other of others">
+            <a  [routerLink]="other.link" mat-list-item *ngFor="let other of others">
                     <div mat-list-icon>
                         <mat-icon [ngClass]="other.iconClass" >{{other.icon}}</mat-icon>
-                </div>
+                    </div>
              <div mat-line >{{other.name}}</div>
               </a>
           </mat-list>
@@ -58,6 +58,9 @@
 
 
     <mat-sidenav-content class="position-relative" [ngClass]="isHandset? '': ''">
+    
+     
+
         <header class="mian-header">
             <mat-toolbar>
                 <div class="d-flex justify-content-between align-items-center  w-100">
@@ -102,6 +105,8 @@
         <footer class="px-4 mt-5">
             <p> &copy; Bitcoin App, 2020</p>
         </footer>
+
+    
 
     </mat-sidenav-content>
 </mat-sidenav-container>

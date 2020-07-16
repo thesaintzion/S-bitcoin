@@ -37,14 +37,14 @@ export class DashboardLayoutComponent implements OnInit {
           icon: 'person',
           // iconClass: 'text-primary',
           iconClass: 'text-dark',
-          link: ''
+          link: 'profile'
         },
         {
           name: 'Upgrade Account',
           icon: 'account_balance_wallet',
           // iconClass: 'text-light',
           iconClass: 'text-dark',
-          link: ''
+          link: 'upgrade-account'
         }
       ];
       this.plans = [
@@ -53,53 +53,55 @@ export class DashboardLayoutComponent implements OnInit {
           icon: 'widgets',
           // iconClass: 'text-danger',
           iconClass: 'text-dark',
-          link: ''
+          link: 'investment-plans'
         },
         {
           name: 'My Packages',
           icon: 'card_giftcard',
           // iconClass: 'text-success',
           iconClass: 'text-dark',
-          link: ''
+          link: 'packages'
         }
       ];
 
+  
       this.others = [
         {
           name: 'Deposites',
           icon: 'add_box',
           // iconClass: 'text-warning',
           iconClass: 'text-dark',
-          link: ''
+          link: 'deposite'
         },
         {
           name: 'Withdrawals',
           icon: 'monetization_on',
           // iconClass: 'text-primary',
           iconClass: 'text-dark',
-          link: ''
+          link: 'withdrawals'
         },
         {
           name: 'Transaction Logs',
           icon: 'cached',
           // iconClass: 'text-warning',
           iconClass: 'text-dark',
-          link: ''
-        },
-        {
-          name: 'Support',
-          icon: 'contact_support',
-          // iconClass: 'text-success',
-          iconClass: 'text-dark',
-          link: ''
+          link: 'transaction-logs'
         },
         {
           name: 'Refer a User',
           icon: 'group',
           // iconClass: 'text-primary',
           iconClass: 'text-dark',
-          link: ''
+          link: 'refer'
         },
+        {
+          name: 'Support',
+          icon: 'contact_support',
+          // iconClass: 'text-success',
+          iconClass: 'text-dark',
+          link: 'support'
+        }
+        
         
       ];
 

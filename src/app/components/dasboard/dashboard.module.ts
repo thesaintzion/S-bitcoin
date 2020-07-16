@@ -15,6 +15,11 @@ import { UpgradeAccountComponent } from './_account/upgrade-account/upgrade-acco
 import { ThemeComponent } from './_account/theme/theme.component';
 import { InvestmentPlansComponent } from './_plans_packages/investment-plans/investment-plans.component';
 import { PackagesComponent } from './_plans_packages/packages/packages.component';
+import { DepositesComponent } from './deposites/deposites.component';
+import { WithdrawalsComponent } from './withdrawals/withdrawals.component';
+import { TransactionLogsComponent } from './transaction-logs/transaction-logs.component';
+import { SupportComponent } from './support/support.component';
+import { ReferComponent } from './refer/refer.component';
 
 
 // import { StoreModule } from '@ngrx/store';
@@ -33,6 +38,11 @@ import { PackagesComponent } from './_plans_packages/packages/packages.component
     ThemeComponent,
     InvestmentPlansComponent,
     PackagesComponent,
+    DepositesComponent,
+    WithdrawalsComponent,
+    TransactionLogsComponent,
+    SupportComponent,
+    ReferComponent,
   ],
   imports: [
     CommonModule,

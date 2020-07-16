@@ -1,9 +1,19 @@
+    <!-- <app-loading-layout></app-loading-layout> -->
 <div class="dashboard-home pt-3">
   <div class="container">
 <section class="welcome-smg marquee">
-  <p class="text-dark">Welcome to Bitcaoin Easy App</p>
+  <p>Welcome to Bitcoin Easy Platform</p>
 </section>
 
+<section>
+    <mat-list>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>folder</mat-icon>
+          <div mat-line>{{folder.name}}</div>
+          <div mat-line> <mat-icon>money</mat-icon> </div>
+        </mat-list-item>
+    </mat-list>
+</section>
 <section class="welcome-smg">
   <div class="row  animated fadeInUp">
 
