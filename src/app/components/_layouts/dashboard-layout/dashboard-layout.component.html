@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
 
-    <mat-sidenav #drawer class="sidenav shadow border-0" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-sidenav #drawer class="sidenav shadow bor" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar class="shadow-sm pl-0 pr-0">
             <!-- routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}" -->
@@ -20,19 +20,19 @@
         </mat-toolbar>
 
         <mat-list>
-            <a mat-list-item  routerLink="/app">
-                <mat-icon mat-list-icon>home</mat-icon>
+            <a mat-list-item routerLinkActive="active" routerLink="/app">
+                <mat-icon class="text-dark" mat-list-icon>home</mat-icon>
                 <div mat-line>Dashboard</div>
               </a>
               <mat-divider></mat-divider>
             <a mat-list-item  [routerLink]="accnt.link" *ngFor="let accnt of account">
-              <mat-icon  mat-list-icon>{{accnt.icon}}</mat-icon>
+              <mat-icon [ngClass]="accnt.iconClass"  mat-list-icon>{{accnt.icon}}</mat-icon>
               <div mat-line>{{accnt.name}}</div>
             </a>
             <mat-divider></mat-divider>
         
             <mat-list-item *ngFor="let plan of plans ">
-              <mat-icon mat-list-icon>{{plan.icon}}</mat-icon>
+              <mat-icon [ngClass]="plan.iconClass" mat-list-icon>{{plan.icon}}</mat-icon>
               <div mat-line>{{plan.name}}</div>
             </mat-list-item>
 
@@ -41,8 +41,7 @@
                     <div mat-list-icon>
                         <mat-icon [ngClass]="other.iconClass" >{{other.icon}}</mat-icon>
                 </div>
-                        <div mat-line>{{other.name}}</div>
-           
+             <div mat-line >{{other.name}}</div>
               </a>
           </mat-list>
 
@@ -60,28 +59,41 @@
 
     <mat-sidenav-content class="position-relative" [ngClass]="isHandset? '': ''">
         <header class="mian-header">
-            <mat-toolbar class="shadow-sm">
-                <div class="d-flex justify-content-between align-items-center align-content-center w-100">
-                    <div>
-                        <button mat-icon-button  routerLinkActive="active" routerLink="/app">
-                            <!-- <mat-icon class="color-orange">home</mat-icon> -->
+            <mat-toolbar>
+                <div class="d-flex justify-content-between align-items-center  w-100">
+                    <div class="d-flex justify-content-betwe">  
+                        <button  tabindex="-1" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+                        <mat-icon class="text-yellow" aria-label="Side nav toggle icon">menu</mat-icon>
                         </button>
+                    </div>
+                
+                    <div *ngIf="isHandset">
+                        <span >
+                            <a mat-list-item>
+                                <img class="logo" mat-line src="../../../../assets/img/logo-1.svg">
+                              </a>
+                          </span>
                     </div>
                    
-                    <div>
-                        <button class="bg-yellow" mat-icon-button mat-raised-button routerLinkActive="active" routerLink="users">
-                            <!-- <mat-icon>group</mat-icon> -->
+                               
+
+                <div>
+                    <span>
+                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent' : 'bg-dark'" class="ml-3 " mat-icon-button mat-raised-button routerLink="profile">
+                        <mat-icon class="text-yellow">person</mat-icon>
                         </button>
-                        <button class="ml-3 bg-yellow" mat-icon-button mat-raised-button routerLink="profile">
-                            <!-- <mat-icon>person</mat-icon> -->
-                        </button>
-                    </div>
+                        <span *ngIf="!isHandset" class="text-yellow ml-3">Hi, Jhon Joe</span>
+                    </span>
+                    <button  tabindex="-1" *ngIf="!isHandset" class="ml-5 btn-rounded bg-dark text-danger" routerLink="/app"  mat-raised-button >
+                        <mat-icon>power_settings_new</mat-icon> Logout
+                    </button>
+                </div>
                    
                 </div>
             </mat-toolbar>
         </header>
 
-        <div [ngClass]="isHandset? '': ''">
+        <div  >
             <router-outlet>
             </router-outlet>
         </div>

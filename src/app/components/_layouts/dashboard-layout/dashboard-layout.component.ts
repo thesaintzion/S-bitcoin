@@ -35,27 +35,31 @@ export class DashboardLayoutComponent implements OnInit {
         {
           name: 'Profile Settings',
           icon: 'person',
-          iconClass: '',
+          // iconClass: 'text-primary',
+          iconClass: 'text-dark',
           link: ''
         },
         {
           name: 'Upgrade Account',
           icon: 'account_balance_wallet',
-          iconClass: '',
+          // iconClass: 'text-light',
+          iconClass: 'text-dark',
           link: ''
         }
       ];
       this.plans = [
         {
           name: 'Investment Plans',
-          icon: 'account_balance_wallet',
-          iconClass: '',
+          icon: 'widgets',
+          // iconClass: 'text-danger',
+          iconClass: 'text-dark',
           link: ''
         },
         {
-          name: 'Packages',
-          icon: 'account_balance_wallet',
-          iconClass: '',
+          name: 'My Packages',
+          icon: 'card_giftcard',
+          // iconClass: 'text-success',
+          iconClass: 'text-dark',
           link: ''
         }
       ];
@@ -64,39 +68,39 @@ export class DashboardLayoutComponent implements OnInit {
         {
           name: 'Deposites',
           icon: 'add_box',
-          iconClass: '',
+          // iconClass: 'text-warning',
+          iconClass: 'text-dark',
           link: ''
         },
         {
           name: 'Withdrawals',
           icon: 'monetization_on',
-          iconClass: 'text-primary',
+          // iconClass: 'text-primary',
+          iconClass: 'text-dark',
           link: ''
         },
         {
           name: 'Transaction Logs',
-          icon: 'timelapse',
-          iconClass: '',
+          icon: 'cached',
+          // iconClass: 'text-warning',
+          iconClass: 'text-dark',
           link: ''
         },
         {
-          name: 'Packages',
-          icon: 'monetization_on',
-          iconClass: 'text-success',
+          name: 'Support',
+          icon: 'contact_support',
+          // iconClass: 'text-success',
+          iconClass: 'text-dark',
           link: ''
         },
         {
           name: 'Refer a User',
           icon: 'group',
-          iconClass: 'text-primary',
+          // iconClass: 'text-primary',
+          iconClass: 'text-dark',
           link: ''
         },
-        {
-          name: 'Packages',
-          icon: 'account_balance_wallet',
-          iconClass: '',
-          link: ''
-        }
+        
       ];
 
        let items = [

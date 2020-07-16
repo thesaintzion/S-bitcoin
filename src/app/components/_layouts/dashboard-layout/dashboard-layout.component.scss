@@ -4,9 +4,21 @@
     $home_page_bg: #C4C4C4;
     $dashbord_bg: #F5F7FA;
     $yellow: #f3cb00;
+
+    a{
+        text-decoration: none !important;
+        &:hover{
+            text-decoration: none !important;
+        }
+    }
     // overrides
     .sidenav-container {
         height: 100%;
+
+        .logo{
+            width: 35px;
+            height: 35px;
+        }
     }
     // .mat-sidenav-inner-con {
     //     height: calc(100vh - 56px);
@@ -17,20 +29,13 @@
         width: 300px;
         border: 0 !important;
         overflow-x: hidden;
-        // background-color: transparent;
-        border: 0;
+        background-color: #000;
+        // border: 0;
         .mat-toolbar {
             height: 56px;
             background-color: #000;
             color: $yellow;
-            
-            .logo{
-                width: 40px;
-                height: 40px;
-            }
-            .logo-name{
-                font-weight: 600;
-            }
+        
         }
         .sidenav-action {
             position: absolute;
@@ -39,6 +44,7 @@
             z-index: 20;
         }
         .mat-list{
+
             .mat-icon{
                 // color: $home_page_bg !important;
             }
@@ -53,15 +59,28 @@
     .mat-list-base .mat-list-item .mat-list-item-content {
         padding-left: 15px;
         padding-right: 15px;
+        .mat-list-text{
+            color:  #343a40;
+            font-weight: bolder !important;
+        }
+      
+   
         &:hover {
-            background-color: transparent;
+            // background-color: transparent;
+            background-color: rgb(20, 20, 20) !important;
             opacity: 1;
+
+            .mat-list-text{
+                // color: gray !important;
+                // background-color: gray !important;
+            }
         }
     }
  
  
   .mat-sidenav-content{
-      background-color:#f0f2f5;
+    //   background-color:#f0f2f5;
+      background-color:#ffffff;
     header.mian-header {
         position: sticky;
         top: 0;
@@ -75,7 +94,7 @@
                 // font-size: 30px;
                 // width: 30px;
                 // height: 30px;
-                vertical-align: middle;
+                // vertical-align: middle;
                 // color: red;
             }
         }
@@ -139,5 +158,16 @@
          ::-webkit-scrollbar-thumb {
             background: gray;
         }
+    }
+
+    @media (max-width: 767px){   
+        .sidenav-container{
+            .logo{
+                width: 30px;
+                height: 30px;
+            }
+        }
+            
+    
     }
 }
