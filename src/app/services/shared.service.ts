@@ -16,6 +16,8 @@ LoggedIn: boolean;
     name: null,
     showArrowBack: null
   }
+  THEME = '';
+
   constructor(private snackBar: MatSnackBar, private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) {  }
     // snackBar message
     openSnackBar(message: string, action: string, duration: number, panelClass: string) {

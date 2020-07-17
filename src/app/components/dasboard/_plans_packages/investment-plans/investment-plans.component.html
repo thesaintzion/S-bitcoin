@@ -1,15 +1,15 @@
 <!-- <app-loading-layout></app-loading-layout> -->
-<div class="investment-plan pt-3">
+<div class="investment-plan pt-3 " [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''">
     <div class="container">
         <section>
 
 
             <div class="row  animated fadeInUp">
                 <div class="col-lg-4  mb-4 ">
-                    <mat-card class="shadow-sm-fb">
+                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
                         <mat-card-title class="mb-3 text-success">Basic Plan</mat-card-title>
                         <div class="price">
-                            <mat-card-title>
+                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
                                 $5000+
                             </mat-card-title>
                             <mat-card-subtitle class="text-muted">$5000 - $19999</mat-card-subtitle>
@@ -24,17 +24,17 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button class="btn-rounded text-success">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-success">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
                 </div>
 
                 <div class="col-lg-4  mb-4 ">
-                    <mat-card class="shadow-sm-fb">
+                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
                         <mat-card-title class="mb-3 text-primary">Premium Plan</mat-card-title>
                         <div class="price">
-                            <mat-card-title>
+                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
                                 $20000+
                             </mat-card-title>
                             <mat-card-subtitle class="text-muted">$20000 - $99999</mat-card-subtitle>
@@ -49,7 +49,7 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button class="btn-rounded text-primary">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" mat-raised-button class="btn-rounded text-primary">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
@@ -57,10 +57,10 @@
 
 
                 <div class="col-lg-4  mb-4 ">
-                    <mat-card class="shadow-sm-fb">
+                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
                         <mat-card-title class="mb-3 text-danger">Ultimate Plan</mat-card-title>
                         <div class="price">
-                            <mat-card-title>
+                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
                                 $100000+
                             </mat-card-title>
                             <mat-card-subtitle class="text-muted">$100000 - $1000000</mat-card-subtitle>
@@ -75,17 +75,17 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button class="btn-rounded text-danger">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-danger">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
                 </div>
 
                 <div class="col-lg-4  mb-4 ">
-                    <mat-card class="shadow-sm-fb">
+                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
                         <mat-card-title class="mb-3 text-dark">Simple Plan</mat-card-title>
                         <div class="price">
-                            <mat-card-title>
+                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
                                 $1000+
                             </mat-card-title>
                             <mat-card-subtitle class="text-muted">$500 - $4000</mat-card-subtitle>
@@ -97,12 +97,11 @@
                             <p class="text-align-enter">
                                 <span></span>
                                 <mat-icon>done</mat-icon> 7% Weekly return</p>
-
                         </mat-card-content>
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button class="btn-rounded text-dark">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-muted">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
                             </div>
                         </mat-card-actions>
                     </mat-card>

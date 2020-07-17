@@ -15,7 +15,7 @@
         .mat-card {
             border-radius: 15px;
             background-color: #eeeeee;
-            // background-color: #f8f8f8;
+            // background-color: rgb(29, 29, 29);
             .mat-card-title {
                 // color: $yellow;
             }
@@ -30,6 +30,9 @@
                         // display: none;
                     }
                 }
+            }
+            button {
+                // background-color: ;
             }
         }
     }

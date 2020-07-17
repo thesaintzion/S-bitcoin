@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-investment-plans',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./investment-plans.component.scss']
 })
 export class InvestmentPlansComponent implements OnInit {
+  constructor(private sharedService: SharedService) { }
 
-  constructor() { }
+
+  setTheme(){
+    let theme = localStorage.getItem('theme');
+    if(theme != null){
+this.sharedService.THEME = theme;
+    }
+  }
 
   ngOnInit() {
+    this.setTheme()
   }
 
 }
