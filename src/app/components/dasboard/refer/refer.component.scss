@@ -1,0 +1,27 @@
+:host ::ng-deep {
+    $home_page_bg: #C4C4C4;
+    $dashbord_bg: #F5F7FA;
+    $yellow: #f3cb00;
+    // Globa
+    .mat-icon {
+        vertical-align: middle !important;
+    }
+    .packages {
+        min-height: 100vh;
+        // background-color: $home_page_bg;
+        .no-packages {
+            height: 100vh;
+            text-align: center;
+            .mat-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 70px;
+            }
+            h3 {
+                font-size: 20px !important;
+                font-weight: 800 !important;
+                color: #000000 !important;
+            }
+        }
+    }
+}

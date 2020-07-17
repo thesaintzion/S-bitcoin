@@ -9,7 +9,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { SharedService } from './services/shared.service';
 import { DialogComponent } from './components/_dialogs/dialog/dialog.component';
 import { HomePageComponent } from './components/main/home-page/home-page.component';
-import { LoginDialogComponent } from './components/_dialogs/login-dialog/login-dialog.component';
 import { StoreModule } from '@ngrx/store';
 import {ConnectReducers}  from './store/shared/connect-reducers/connect-reducers'
 import { ScrollUpComponent } from './shared/components/scroll-up/scroll-up.component';
@@ -20,7 +19,6 @@ import { GoogleLoginProvider, FacebookLoginProvider,  LoginOpt } from "angularx-
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { AuthenticationService } from './services/authentication.service';
-import { UserContextComponent } from './components/_dialogs/user-context/user-context.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { HomeSlideComponent } from './components/main/home-slide/home-slide.component';
 import { AboutComponent } from './components/main/about/about.component';
@@ -59,9 +57,7 @@ export function provideConfig() {
     PageNotFoundComponent,
     DialogComponent,
     HomePageComponent,
-    LoginDialogComponent,
     ScrollUpComponent,
-    UserContextComponent,
     HomeSlideComponent,
     AboutComponent,
     ContactComponent,
@@ -96,7 +92,7 @@ export function provideConfig() {
       multi: true
     }
   ],
-  entryComponents: [DialogComponent, LoginDialogComponent, UserContextComponent],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
