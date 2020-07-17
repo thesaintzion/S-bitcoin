@@ -1,21 +1,17 @@
 :host ::ng-deep {
-    $pink: #FD287B;
-    $orenge: #FF7058;
     $home_page_bg: #C4C4C4;
     $dashbord_bg: #F5F7FA;
     $yellow: #f3cb00;
-
-    a{
+    a {
         text-decoration: none !important;
-        &:hover{
+        &:hover {
             text-decoration: none !important;
         }
     }
     // overrides
     .sidenav-container {
         height: 100%;
-
-        .logo{
+        .logo {
             width: 35px;
             height: 35px;
         }
@@ -30,12 +26,14 @@
         border: 0 !important;
         overflow-x: hidden;
         background-color: #000;
-        // border: 0;
+        // background-color: transparent;
+        // background-color: #f0f2f5;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0;
+        border: 0;
         .mat-toolbar {
             height: 56px;
             background-color: #000;
             color: $yellow;
-        
         }
         .sidenav-action {
             position: absolute;
@@ -43,9 +41,8 @@
             left: 20px;
             z-index: 20;
         }
-        .mat-list{
-
-            .mat-icon{
+        .mat-list {
+            .mat-icon {
                 // color: $home_page_bg !important;
             }
         }
@@ -53,55 +50,48 @@
             margin-left: 0 !important;
             // display: none;
         }
-       
-       
     }
     .mat-list-base .mat-list-item .mat-list-item-content {
         padding-left: 15px;
         padding-right: 15px;
-        .mat-list-text{
-            color:  #343a40;
+        .mat-list-text {
+            color: #343a40;
             font-weight: bolder !important;
         }
-      
-   
         &:hover {
             // background-color: transparent;
             background-color: rgb(20, 20, 20) !important;
             opacity: 1;
-
-            .mat-list-text{
+            .mat-list-text {
                 // color: gray !important;
                 // background-color: gray !important;
             }
         }
     }
- 
- 
-  .mat-sidenav-content{
-    //   background-color:#f0f2f5;
-      background-color:#ffffff;
-    header.mian-header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        .mat-toolbar {
-            height: 56px;
-            // background-color: transparent;
-            background-color: #000;
-            .mat-icon {
-                // color: #dadfe6;
-                // font-size: 30px;
-                // width: 30px;
-                // height: 30px;
-                // vertical-align: middle;
-                // color: red;
+    .mat-sidenav-content {
+        //   background-color:#f0f2f5;
+        // background-color: #ffffff;
+        background-color: #f0f2f5;
+        header.mian-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            .mat-toolbar {
+                height: 56px;
+                // background-color: transparent;
+                background-color: #000;
+                .mat-icon {
+                    // color: #dadfe6;
+                    // font-size: 30px;
+                    // width: 30px;
+                    // height: 30px;
+                    // vertical-align: middle;
+                    // color: red;
+                }
             }
         }
     }
-  }
     .add-btn {
-        
         &::before {
             content: "";
             position: absolute;
@@ -153,21 +143,18 @@
             border-radius: 10px;
             background-clip: padding-box;
             height: 5px;
-            background-color:#d8d9da;
+            background-color: #d8d9da;
         }
          ::-webkit-scrollbar-thumb {
             background: gray;
         }
     }
-
-    @media (max-width: 767px){   
-        .sidenav-container{
-            .logo{
+    @media (max-width: 767px) {
+        .sidenav-container {
+            .logo {
                 width: 30px;
                 height: 30px;
             }
         }
-            
-    
     }
 }

@@ -1,0 +1,28 @@
+:host ::ng-deep {
+    $dashbord_bg: #f0f2f5;
+    $yellow: #f3cb00;
+    .upgrade-account {
+        min-height: 100vh;
+        background-color: #f0f2f5;
+        .mat-icon {
+            vertical-align: middle;
+        }
+        .card {
+            border-radius: 15px;
+            button {
+                // background-color: #f0f2f5 !important;
+                font-weight: 500 !important;
+            }
+        }
+    }
+    .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+        border-color: #1aa15f;
+    }
+    .mat-radio-button.mat-accent .mat-radio-inner-circle {
+        color: #1aa15f;
+        background-color: #1aa15f;
+    }
+    .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+        background-color: rgb(255, 37, 37, .26);
+    }
+}

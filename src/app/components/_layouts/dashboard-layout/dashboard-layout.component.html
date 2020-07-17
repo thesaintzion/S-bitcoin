@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav shadow bor" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-sidenav #drawer class="sidenav shado bor" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
         <mat-toolbar class="shadow-sm pl-0 pr-0">
             <div class="d-flex justify-content-between align-items-center align-content-center w-100">
                 <div>
@@ -69,16 +69,18 @@
                     </div>
 
 
-                    <div>
-                        <!-- <div class="input-group">
+                    <div *ngIf="!isHandset">
+                        <div class="input-group">
+
                             <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                        <mat-icon>search</mat-icon>
+                                <span class="input-group-text bg-dark border-0">
+                                        <mat-icon class="">search</mat-icon>
                                 </span>
                             </div>
 
-                            <input class="form-control" placeholder="Search something">
-                        </div> -->
+
+                            <input class="form-control bg-dark border-0" placeholder="Search something">
+                        </div>
                     </div>
 
 
@@ -93,12 +95,12 @@
 
 
                     <div>
-                        <span>
-                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent' : 'bg-dark'" class="ml-3 " mat-icon-button mat-raised-button routerLink="profile">
-                        <mat-icon class="text-yellow">person</mat-icon>
+                        <button tabindex="-1" *ngIf="!isHandset" class=" ml-3 pl-0 text-left btn-rounded bg-dark text-danger" routerLink="/app" mat-raised-button>
+                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent' : 'bg-dark'" class="" mat-icon-button mat-raised-button routerLink="profile">
+                        <mat-icon class="text-muted">person</mat-icon>
                         </button>
-                        <span *ngIf="!isHandset" class="text-yellow ml-3">Hi, Jhon Joe</span>
-                        </span>
+                        <span *ngIf="!isHandset" class="text-success ml-3">Hi, John Doe</span>
+                        </button>
                         <button tabindex="-1" *ngIf="!isHandset" class="ml-5 btn-rounded bg-dark text-danger" routerLink="/app" mat-raised-button>
                         <mat-icon>power_settings_new</mat-icon> Logout
                     </button>

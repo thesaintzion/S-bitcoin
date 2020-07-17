@@ -4,60 +4,58 @@
     $home_page_bg: #C4C4C4;
     $dashbord_bg: #F5F7FA;
     $yellow: #f3cb00;
-
     // Globa
-    .mat-icon{
+    .mat-card {
+        border-radius: 10px !important;
+    }
+    .mat-icon {
         vertical-align: middle !important;
     }
     .router-con {
         min-height: 100vh;
     }
-
     .marquee {
         width: 100%;
         white-space: nowrap;
         overflow: hidden;
-      
     }
     .marquee p {
         display: inline-block;
         padding-left: 100%;
         animation: marquee 15s linear infinite;
         color: #1aa15f;
-        font-weight:700 !important;
+        font-weight: 700 !important;
         font-size: 20px;
         text-transform: capitalize;
-
-        span{
+        span {
             font-size: inherit;
             font-weight: inherit;
             // color: $yellow;
             // background-color: #000;
         }
     }
-    
     @keyframes marquee {
-        0%   { transform: translate(0, 0); }
-        100% { transform: translate(-100%, 0); }
+        0% {
+            transform: translate(0, 0);
+        }
+        100% {
+            transform: translate(-100%, 0);
+        }
     }
-
-       // link-box
-       .link-box {
+    // link-box
+    .link-box {
         // height: 200px;
         text-align: center !important;
-
         .mat-icon {
             font-size: 50px;
             height: 50px !important;
             // color: gray !important;
             width: 50px !important;
             margin: 0 auto !important;
-        
         }
-       
         h3 {
             font-size: 14px;
-            color: rgba(0,0,0,0.4);
+            color: rgba(0, 0, 0, 0.4);
             margin-top: 25px;
         }
         &:hover {
@@ -67,28 +65,21 @@
             .mat-icon {
                 color: $yellow !important;
             }
-            h3{
-color: $yellow;
+            h3 {
+                color: $yellow;
             }
         }
     }
-
-
-    .link-box.active{
+    .link-box.active {
         background-color: #000;
         color: $yellow !important;
         .mat-icon {
             color: $yellow !important;
         }
-   
-    h3 {
-        
-        color: $yellow;
+        h3 {
+            color: $yellow;
+        }
     }
-    }
-
-
-
     header.mobile-header {
         position: sticky;
         top: 0;
@@ -107,17 +98,17 @@ color: $yellow;
             }
         }
     }
-
-
-
-    .dashboard-home{
+    .dashboard-home {
         min-height: 100vh;
         // background-color: $home_page_bg;
-
-        iframe{
-            min-height: 100vh;  
+        background-color: #f0f2f5;
+        .title {
+            font-size: 20px !important;
+            font-weight: 800 !important;
+            color: #000000 !important;
+        }
+        iframe {
+            min-height: 100vh;
         }
     }
-
-
 }

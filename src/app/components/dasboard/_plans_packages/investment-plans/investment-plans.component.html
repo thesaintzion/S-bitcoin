@@ -1,106 +1,113 @@
 <!-- <app-loading-layout></app-loading-layout> -->
-<div class="dashboard-home pt-3">
+<div class="investment-plan pt-3">
     <div class="container">
         <section>
-            <mat-list>
-                <mat-list-item *ngFor="let folder of folders">
-                    <mat-icon mat-list-icon>folder</mat-icon>
-                    <div mat-line>{{folder.name}}</div>
-                    <div mat-line>
-                        <mat-icon>money</mat-icon>
-                    </div>
-                </mat-list-item>
-            </mat-list>
-        </section>
-        <section class="welcome-smg">
+
 
             <div class="row  animated fadeInUp">
-                <div class="col-md-4 col-lg-2  mb-4 ">
-                    <mat-card routerLink="transactions" class="link-box">
-                        <div class="d-flex align-content-center align-items-center justify-content-center">
-                            <div class="link-box-text">
-                                <mat-icon>cached</mat-icon>
-                                <h3>Transactions</h3>
-                            </div>
+                <div class="col-lg-4  mb-4 ">
+                    <mat-card class="shadow-sm-fb">
+                        <mat-card-title class="mb-3 text-success">Basic Plan</mat-card-title>
+                        <div class="price">
+                            <mat-card-title>
+                                $5000+
+                            </mat-card-title>
+                            <mat-card-subtitle class="text-muted">$5000 - $19999</mat-card-subtitle>
                         </div>
+
+                        <mat-card-content class="text-muted mt-4">
+                            <p>
+                                <mat-icon>done</mat-icon> At least $1000 expected return</p>
+                            <p>
+                                <mat-icon>done</mat-icon> 14% Monthly return</p>
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <div class="d-flex justify-content-end">
+                                <button mat-raised-button class="btn-rounded text-success">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                            </div>
+                        </mat-card-actions>
                     </mat-card>
                 </div>
 
-                <div class="col-md-4 col-lg-2  mb-4 ">
-                    <mat-card routerLink="requests" class="link-box">
-                        <div class="d-flex align-content-center align-items-center justify-content-center">
-                            <div class="link-box-text">
-                                <mat-icon>widgets</mat-icon>
-                                <h3>Investment Plans</h3>
-
-                            </div>
+                <div class="col-lg-4  mb-4 ">
+                    <mat-card class="shadow-sm-fb">
+                        <mat-card-title class="mb-3 text-primary">Premium Plan</mat-card-title>
+                        <div class="price">
+                            <mat-card-title>
+                                $20000+
+                            </mat-card-title>
+                            <mat-card-subtitle class="text-muted">$20000 - $99999</mat-card-subtitle>
                         </div>
+
+                        <mat-card-content class="text-muted mt-4">
+                            <p>
+                                <mat-icon>done</mat-icon> At least $2000 expected return</p>
+                            <p>
+                                <mat-icon>done</mat-icon> 20% Monthly return</p>
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <div class="d-flex justify-content-end">
+                                <button mat-raised-button class="btn-rounded text-primary">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                            </div>
+                        </mat-card-actions>
                     </mat-card>
                 </div>
 
 
-
-                <div class="col-md-4 col-lg-2  mb-4">
-                    <mat-card routerLink="accounts" class="link-box">
-                        <div class="d-flex align-content-center align-items-center justify-content-center">
-                            <div class="link-box-text">
-                                <mat-icon>account_balance_wallet</mat-icon>
-                                <h3>Upgrade Accounts</h3>
-                            </div>
+                <div class="col-lg-4  mb-4 ">
+                    <mat-card class="shadow-sm-fb">
+                        <mat-card-title class="mb-3 text-danger">Ultimate Plan</mat-card-title>
+                        <div class="price">
+                            <mat-card-title>
+                                $100000+
+                            </mat-card-title>
+                            <mat-card-subtitle class="text-muted">$100000 - $1000000</mat-card-subtitle>
                         </div>
+
+                        <mat-card-content class="text-muted mt-4">
+                            <p>
+                                <mat-icon>done</mat-icon> At least $4000 expected return</p>
+                            <p>
+                                <mat-icon>done</mat-icon> 25% Monthly return</p>
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <div class="d-flex justify-content-end">
+                                <button mat-raised-button class="btn-rounded text-danger">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                            </div>
+                        </mat-card-actions>
                     </mat-card>
                 </div>
 
-
-                <div class="col-md-4 col-lg-2  mb-4">
-                    <mat-card routerLink="users" class="link-box">
-                        <div class="">
-                            <div class="link-box-text">
-                                <mat-icon>group</mat-icon>
-                                <h3>Refer a User</h3>
-                            </div>
+                <div class="col-lg-4  mb-4 ">
+                    <mat-card class="shadow-sm-fb">
+                        <mat-card-title class="mb-3 text-dark">Simple Plan</mat-card-title>
+                        <div class="price">
+                            <mat-card-title>
+                                $1000+
+                            </mat-card-title>
+                            <mat-card-subtitle class="text-muted">$500 - $4000</mat-card-subtitle>
                         </div>
+
+                        <mat-card-content class="text-muted mt-4">
+                            <p>
+                                <mat-icon>done</mat-icon> At least $500 expected return</p>
+                            <p class="text-align-enter">
+                                <span></span>
+                                <mat-icon>done</mat-icon> 7% Weekly return</p>
+
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <div class="d-flex justify-content-end">
+                                <button mat-raised-button class="btn-rounded text-dark">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                            </div>
+                        </mat-card-actions>
                     </mat-card>
                 </div>
 
-
-                <div class="col-md-4 col-lg-2  mb-4 ">
-                    <mat-card routerLink="settings/profile" class="link-box">
-                        <div class="d-flex align-content-center align-items-center justify-content-center">
-                            <div class="link-box-text">
-                                <mat-icon>add_box</mat-icon>
-                                <h3>Deposite</h3>
-                            </div>
-                        </div>
-                    </mat-card>
-                </div>
-
-                <div class="col-md-4 col-lg-2  mb-4 ">
-                    <a routerLink="/">
-                        <mat-card class="link-box active">
-                            <div class="d-flex align-content-center align-items-center justify-content-center">
-                                <div class="link-box-text">
-                                    <mat-icon class="color-primary">contact_support</mat-icon>
-                                    <h3>Get Support</h3>
-                                </div>
-                            </div>
-                        </mat-card>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="pt-3">
-            <p class="headlin">
-                <mat-icon class="headline-icon mr-3">bar_chart</mat-icon> <span>Forex Market Fundamental Data</span>
-            </p>
-            <div>
-                <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://s.tradingview.com/embed-widget/forex-cross-rates/?locale=en#%7B%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22utm_source%22%3A%22www.accounts.millenniumcryptotrade2.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%7D"
-                    style="box-sizing: border-box; height: calc(100% - 32px); width: 100%;"></iframe>
-            </div>
-            <div class="mt-5">
-                <iframe id="tradingview_0dc50" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_0dc50&amp;symbol=COINBASE%3ABTCUSD&amp;interval=1&amp;hidesidetoolbar=0&amp;symboledit=1&amp;saveimage=1&amp;toolbarbg=f1f3f6&amp;studies=BB%40tv-basicstudies&amp;theme=Light&amp;style=9&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=www.accounts.millenniumcryptotrade2.com&amp;utm_medium=widget_new&amp;utm_campaign=chart&amp;utm_term=COINBASE%3ABTCUSD"
-                    style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen=""></iframe>
             </div>
         </section>
 
