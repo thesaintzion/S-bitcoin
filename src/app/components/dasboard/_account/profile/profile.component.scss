@@ -1,0 +1,20 @@
+.profile {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    .mat-icon {
+        vertical-align: middle;
+    }
+    .card {
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0;
+        button {
+            // background-color: #f0f2f5 !important;
+            font-weight: 500 !important;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 800 !important;
+            color: #000000;
+        }
+    }
+}

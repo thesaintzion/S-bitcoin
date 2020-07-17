@@ -37,9 +37,8 @@
 
 
             <a [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
-                <div mat-list-icon>
-                    <mat-icon [ngClass]="other.iconClass">{{other.icon}}</mat-icon>
-                </div>
+                <mat-icon mat-list-icon [ngClass]="other.iconClass">{{other.icon}}</mat-icon>
+
                 <div mat-line>{{other.name}}</div>
             </a>
         </mat-list>
@@ -63,11 +62,25 @@
         <header class="mian-header">
             <mat-toolbar>
                 <div class="d-flex justify-content-between align-items-center  w-100">
-                    <div class="d-flex justify-content-betwe">
-                        <button tabindex="-1" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+                    <div class="d-flex justify-content-betwe" *ngIf="isHandset$ | async">
+                        <button tabindex="-1" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
                         <mat-icon class="text-yellow" aria-label="Side nav toggle icon">menu</mat-icon>
                         </button>
                     </div>
+
+
+                    <div>
+                        <!-- <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                        <mat-icon>search</mat-icon>
+                                </span>
+                            </div>
+
+                            <input class="form-control" placeholder="Search something">
+                        </div> -->
+                    </div>
+
 
                     <div *ngIf="isHandset">
                         <span>
