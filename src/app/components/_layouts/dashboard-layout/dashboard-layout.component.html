@@ -17,26 +17,26 @@
         </mat-toolbar>
 
         <mat-list>
-            <a mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            <a (click)="closeMen(drawer)" mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:
                 true}" routerLink="/app">
                 <mat-icon class="text-dark" mat-list-icon>home</mat-icon>
                 <div mat-line>Dashboard</div>
             </a>
 
-            <a mat-list-item routerLinkActive="active" [routerLink]="accnt.link" *ngFor="let accnt of account">
+            <a (click)="closeMen(drawer)" mat-list-item routerLinkActive="active" [routerLink]="accnt.link" *ngFor="let accnt of account">
                 <mat-icon [ngClass]="accnt.iconClass" mat-list-icon>{{accnt.icon}}</mat-icon>
                 <div mat-line>{{accnt.name}}</div>
             </a>
 
 
-            <a mat-list-item routerLinkActive="active" [routerLink]="plan.link" *ngFor="let plan of plans">
+            <a (click)="closeMen(drawer)" mat-list-item routerLinkActive="active" [routerLink]="plan.link" *ngFor="let plan of plans">
                 <mat-icon [ngClass]="plan.iconClass" mat-list-icon>{{plan.icon}}</mat-icon>
                 <div mat-line>{{plan.name}}</div>
             </a>
 
 
 
-            <a [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
+            <a (click)="closeMen(drawer)" [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
                 <mat-icon mat-list-icon [ngClass]="other.iconClass">{{other.icon}}</mat-icon>
 
                 <div mat-line>{{other.name}}</div>
@@ -92,12 +92,10 @@
                           </span>
                     </div>
 
-
-
                     <div>
-                        <button tabindex="-1" *ngIf="!isHandset" class=" ml-3 pl-0 text-left btn-rounded bg-dark text-danger" routerLink="/app" mat-raised-button>
-                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent' : 'bg-dark'" class="" mat-icon-button mat-raised-button routerLink="profile">
-                        <mat-icon class="text-muted">person</mat-icon>
+                        <button routerLink="profile" tabindex="-1" [ngClass]="isHandset? 'bg-transparent pr-0  text-right' : 'bg-dark ml-3 '" class="pl-0 text-left btn-rounded text-danger" mat-raised-button>
+                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent text-yellow' : 'bg-dark text-muted'" class="" mat-icon-button mat-raised-button routerLink="profile">
+                        <mat-icon >person</mat-icon>
                         </button>
                         <span *ngIf="!isHandset" class="text-success ml-3">Hi, John Doe</span>
                         </button>

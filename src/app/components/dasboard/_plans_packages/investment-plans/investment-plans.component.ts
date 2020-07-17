@@ -7,7 +7,7 @@ import { SharedService } from 'src/app/services/shared.service';
   styleUrls: ['./investment-plans.component.scss']
 })
 export class InvestmentPlansComponent implements OnInit {
-  constructor(private sharedService: SharedService) { }
+  constructor(public sharedService: SharedService) { }
 
 
   setTheme(){

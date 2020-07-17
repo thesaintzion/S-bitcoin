@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "../back/public",
+    "outDir": "./dist/bitcoin-back",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,

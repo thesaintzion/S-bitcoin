@@ -23,6 +23,12 @@ import { AuthenticationService } from './services/authentication.service';
 import { UserContextComponent } from './components/_dialogs/user-context/user-context.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { HomeSlideComponent } from './components/main/home-slide/home-slide.component';
+import { AboutComponent } from './components/main/about/about.component';
+import { ContactComponent } from './components/main/contact/contact.component';
+import { LoginComponent } from './components/main/login/login.component';
+import { PlansComponent } from './components/main/plans/plans.component';
+import { RegisterComponent } from './components/main/register/register.component';
+import { TermsComponent } from './components/main/terms/terms.component';
  
  
 const fbLoginOptions: LoginOpt = {
@@ -56,7 +62,13 @@ export function provideConfig() {
     LoginDialogComponent,
     ScrollUpComponent,
     UserContextComponent,
-    HomeSlideComponent
+    HomeSlideComponent,
+    AboutComponent,
+    ContactComponent,
+    LoginComponent,
+    PlansComponent,
+    RegisterComponent,
+    TermsComponent
 
   ],
   imports: [
