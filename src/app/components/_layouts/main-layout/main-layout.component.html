@@ -1,0 +1,80 @@
+<div class="main-layout">
+    <header class="mian-header">
+        <mat-toolbar>
+            <div class="d-flex justify-content-between align-items-center align-content-center w-100">
+                <div>
+                    <a mat-icon-button routerLinkActive="active" routerLink="/app">
+                        <img class="home-logo" src="https://thesaintzion.github.io/S-bitcoin/assets/img/logo-1.svg">
+                        <span mat-line class="text-white logo-name">Bulb <span  class="text-yellow">Finance</span></span>
+                    </a>
+                </div>
+
+                <div *ngIf="!isHandset">
+                    <button class="btn-rounded bg-dark text-white" routerLink="/app" mat-raised-button>
+                        <mat-icon class="text-white">security</mat-icon> Login
+                    </button>
+
+                    <button class="ml-3 btn-rounded bg-dark text-white" routerLink="/app" mat-raised-button>
+                        <mat-icon class="text-white">person</mat-icon> Rigister
+                    </button>
+                </div>
+
+                <div *ngIf="isHandset">
+                    <button mat-icon-button class="text-white" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>menu</mat-icon>
+                      </button>
+                    <mat-menu #menu="matMenu">
+
+                        <button mat-menu-item>
+                          <mat-icon>home</mat-icon>
+                          <span>Home</span>
+                        </button>
+
+                        <button mat-menu-item>
+                            <mat-icon>info</mat-icon>
+                            <span>About</span>
+                          </button>
+
+                        <button mat-menu-item>
+                            <mat-icon>widgets</mat-icon>
+                            <span>Investment Plans</span>
+                          </button>
+
+                        <button mat-menu-item>
+                            <mat-icon>info</mat-icon>
+                            <span>Contact</span>
+                          </button>
+
+                        <button mat-menu-item>
+                            <mat-icon>info</mat-icon>
+                            <span>Terms</span>
+                          </button>
+
+                        <div mat-menu-item class="mb-2 mt-5">
+                            <button class="btn-rounded w-100 bg-dark text-white" routerLink="/app" mat-raised-button>
+                                <mat-icon class="text-white">security</mat-icon> Login
+                            </button>
+                        </div>
+                        <div mat-menu-item>
+                            <button class="btn-rounded w-100 bg-dark text-yellow" routerLink="/app" mat-raised-button>
+                                <mat-icon class=" text-yellow">person</mat-icon> Rigister
+                            </button>
+                        </div>
+                        <!-- <div>
+                            <div class="d-flex justify-content-between">
+                                <mat-icon>info</mat-icon>
+                                <mat-icon>info</mat-icon>
+                                <mat-icon>info</mat-icon>
+                            </div>
+                        </div> -->
+                    </mat-menu>
+                </div>
+
+            </div>
+        </mat-toolbar>
+    </header>
+    <div>
+        <router-outlet>
+        </router-outlet>
+    </div>
+</div>

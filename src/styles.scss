@@ -135,15 +135,6 @@ table td {
     }
 }
 
-.mobile-header {
-    .active {
-        span,
-        .mat-icon {
-            color: $pink !important;
-        }
-    }
-}
-
 .icon-gray {
     color: #ccd6dd !important;
 }
@@ -232,10 +223,10 @@ button:focus {
 .mat-list .active {
     // border-left: 3px solid $yellow !important;
     .mat-icon {
-        color: #72777c !important;
+        color: #f8f8f8 !important;
     }
     .mat-list-text {
-        color: #4f575f !important;
+        color: #f8f8f8 !important;
     }
 }
 

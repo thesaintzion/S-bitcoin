@@ -10,9 +10,9 @@ export class HomeSlideComponent implements OnInit {
 
   constructor(private config: NgbCarouselConfig) { 
 
-    this.config.interval =  4000;  
+    this.config.interval =  6000;  
     this.config.wrap = true;  
-    this.config.keyboard = false;  
+    this.config.keyboard = true;  
     this.config.pauseOnHover = true;
   }
 

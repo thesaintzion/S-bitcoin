@@ -27,6 +27,7 @@ import { LoginComponent } from './components/main/login/login.component';
 import { PlansComponent } from './components/main/plans/plans.component';
 import { RegisterComponent } from './components/main/register/register.component';
 import { TermsComponent } from './components/main/terms/terms.component';
+import { MainLayoutComponent } from './components/_layouts/main-layout/main-layout.component';
  
  
 const fbLoginOptions: LoginOpt = {
@@ -64,7 +65,8 @@ export function provideConfig() {
     LoginComponent,
     PlansComponent,
     RegisterComponent,
-    TermsComponent
+    TermsComponent,
+    MainLayoutComponent
 
   ],
   imports: [
