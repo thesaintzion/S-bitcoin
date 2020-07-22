@@ -143,14 +143,10 @@ export class DashboardLayoutComponent implements OnInit {
   setHeader(){
     this.title.setTitle('ChatApp');
     this.meta.updateTag({ name: 'description', content: 'Welcome back to'});
-    // this.meta.updateTag({ name: 'theme-color', content: '#C4C4C4'});
+    this.meta.updateTag({ name: 'theme-color', content: '#f3cb00'});
   }
 
-
   
-
-
-
   ngOnInit() {
 this.setHeader();
 
