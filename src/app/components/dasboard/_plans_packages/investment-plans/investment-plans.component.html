@@ -1,21 +1,38 @@
-<!-- <app-loading-layout></app-loading-layout> -->
+<header class="main-header d-flex justify-content-between mb-5">
+    <div class="start">
+        <h1 class="mb-0 text-bolder text-white">Explore</h1>
+        <p class="mb-0 text-white">Browse through our investment plans 😎</p>
+    </div>
+    <div class="end d-flex justify-content-between align-items-center ">
+
+        <button mat-fab class="bg-yellow-light profile-pic shadow ml-3" routerLink="/app/profile" matTooltip="Profile" matTooltipClass="bg-dark">
+
+        </button>
+    </div>
+</header>
+
+
+
+
 <div class="investment-plan pt-3" [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''">
     <div class="container">
+        <div class="page-title mb-4">
+            <h3 class="color-yellow mb-0">Plans</h3>
+        </div>
+
         <section>
-
-
-            <div class="row  animated fadeInUp">
-                <div class="col-lg-4  mb-4 ">
-                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
-                        <mat-card-title class="mb-3 text-success">Basic Plan</mat-card-title>
+            <div class="d-flex ddd animated fadeInUp d-flex no-gutters">
+                <div class="col-4 mr-4 last:mr-0 mb-4 ">
+                    <mat-card class="shadow bg-dark-light">
+                        <mat-card-title class="mb-3 text-success">Basic</mat-card-title>
                         <div class="price">
-                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
-                                $5000+
+                            <mat-card-title class="color-yellow text-bold">
+                                $50,000+
                             </mat-card-title>
-                            <mat-card-subtitle class="text-muted">$5000 - $19999</mat-card-subtitle>
+                            <mat-card-subtitle class="color-yellow-light">$5000 - $19,999</mat-card-subtitle>
                         </div>
 
-                        <mat-card-content class="text-muted mt-4">
+                        <mat-card-content class="text-yellow mt-4">
                             <p>
                                 <mat-icon>done</mat-icon> At least $1000 expected return</p>
                             <p>
@@ -24,23 +41,25 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-success">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button class="btn-rounded text-secondary bg-darker-dark  shadow">Join Plan 	
+                                     <mat-icon class="text-success">arrow_right_alt</mat-icon>
+                                </button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
                 </div>
 
-                <div class="col-lg-4  mb-4 ">
-                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
-                        <mat-card-title class="mb-3 text-primary">Premium Plan</mat-card-title>
+                <div class="col-4 mr-4 last:mr-0 mb-4 ">
+                    <mat-card class="shadow bg-dark-light">
+                        <mat-card-title class="mb-3 text-primary">Premium</mat-card-title>
                         <div class="price">
-                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
-                                $20000+
+                            <mat-card-title class="color-yellow text-bold">
+                                $20,000+
                             </mat-card-title>
-                            <mat-card-subtitle class="text-muted">$20000 - $99999</mat-card-subtitle>
+                            <mat-card-subtitle class="color-yellow-light">$20,000 - $99,999</mat-card-subtitle>
                         </div>
 
-                        <mat-card-content class="text-muted mt-4">
+                        <mat-card-content class="color-yellow mt-4">
                             <p>
                                 <mat-icon>done</mat-icon> At least $2000 expected return</p>
                             <p>
@@ -49,24 +68,26 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" mat-raised-button class="btn-rounded text-primary">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button class="btn-rounded text-secondary bg-darker-dark  shadow">Join Plan 	
+                                    <mat-icon  class="text-primary">arrow_right_alt</mat-icon>
+                               </button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
                 </div>
 
 
-                <div class="col-lg-4  mb-4 ">
-                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
-                        <mat-card-title class="mb-3 text-danger">Ultimate Plan</mat-card-title>
+                <div class="col-4 mr-4 last:mr-0 mb-4 ">
+                    <mat-card class="shadow bg-dark-light">
+                        <mat-card-title class="mb-3 text-info">Ultimate</mat-card-title>
                         <div class="price">
-                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
-                                $100000+
+                            <mat-card-title class="color-yellow text-bold">
+                                $10,000+
                             </mat-card-title>
-                            <mat-card-subtitle class="text-muted">$100000 - $1000000</mat-card-subtitle>
+                            <mat-card-subtitle class="color-yellow-light">$10,000 - $100,000</mat-card-subtitle>
                         </div>
 
-                        <mat-card-content class="text-muted mt-4">
+                        <mat-card-content class="color-yellow mt-4">
                             <p>
                                 <mat-icon>done</mat-icon> At least $4000 expected return</p>
                             <p>
@@ -75,23 +96,25 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-raised-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-danger">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+                                <button mat-raised-button class="btn-rounded text-secondary bg-darker-dark  shadow">Join Plan 	
+                                    <mat-icon class="text-info">arrow_right_alt</mat-icon>
+                               </button>
                             </div>
                         </mat-card-actions>
                     </mat-card>
                 </div>
 
-                <div class="col-lg-4  mb-4 ">
-                    <mat-card [ngClass]="sharedService.THEME == 'dark'? ' bg-black' : ''" class="shadow-sm-fb">
-                        <mat-card-title class="mb-3 text-dark">Simple Plan</mat-card-title>
+                <div class="col-4 mr-4 last:mr-0 mb-4 ">
+                    <mat-card class="shadow bg-dark-light">
+                        <mat-card-title class="mb-3 text-danger">Simple</mat-card-title>
                         <div class="price">
-                            <mat-card-title [ngClass]="sharedService.THEME == 'dark'? 'text-yellow' : ''">
+                            <mat-card-title class="color-yellow text-bold">
                                 $1000+
                             </mat-card-title>
-                            <mat-card-subtitle class="text-muted">$500 - $4000</mat-card-subtitle>
+                            <mat-card-subtitle class="color-yellow-light">$500 - $4000</mat-card-subtitle>
                         </div>
 
-                        <mat-card-content class="text-muted mt-4">
+                        <mat-card-content class="color-yellow mt-4">
                             <p>
                                 <mat-icon>done</mat-icon> At least $500 expected return</p>
                             <p class="text-align-enter">
@@ -101,8 +124,12 @@
 
                         <mat-card-actions>
                             <div class="d-flex justify-content-end">
-                                <button mat-button [ngClass]="sharedService.THEME == 'dark'? ' bg-dark' : ''" class="btn-rounded text-muted">Join Plan 	<mat-icon>arrow_forward</mat-icon></button>
+
+                                <button mat-raised-button class="btn-rounded text-secondary bg-darker-dark  shadow">Join Plan 	
+                                    <mat-icon class="text-danger">arrow_right_alt</mat-icon>
+                               </button>
                             </div>
+
                         </mat-card-actions>
                     </mat-card>
                 </div>

@@ -1,26 +1,38 @@
+<header class="main-header d-flex justify-content-between mb-5">
+    <div class="start">
+        <h1 class="mb-0 text-bolder text-white">Withdrawal</h1>
+        <p class="mb-0 text-white"> We'll send your money to the active one..</p>
+    </div>
+    <div class="end d-flex justify-content-between align-items-center ">
+        <button mat-fab class="bg-yellow-light profile-pic shadow ml-3" routerLink="/app/profile" matTooltip="Profile" matTooltipClass="bg-dark">
+        </button>
+    </div>
+</header>
+
+
 <div class="upgrade-account pt-3">
     <div class="container">
         <mat-radio-group aria-label="Select an option">
-            <p>
-                <mat-icon class="text-primary">info</mat-icon> Add your withdrawal account info. You can add multiple withdrawal methods but can only withdral your money with the active one.
-            </p>
+
+            <div class="page-title mb-4">
+                <h3 class="color-yellow mb-0">Accounts</h3>
+            </div>
+
             <div class="row">
-
-
                 <!-- Bank transfer -->
                 <div class="col-lg-6 animated fadeInUp">
-                    <div class="card shadow-sm-fb mb-4 border-0">
+                    <div class="card shadow mb-4 border-0 bg-dark-light">
                         <div class="card-body ">
                             <div class="d-flex justify-content-between">
-                                <p class="title">
+                                <p class="title text-white">
                                     Bank transfer
                                 </p>
-                                <mat-radio-button value="auto">Active</mat-radio-button>
+                                <mat-radio-button class="color-yellow" value="auto">Active</mat-radio-button>
                             </div>
 
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>Bank Name</mat-label>
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">Bank</mat-label>
                                     <input required matInput placeholder="Bank Name">
                                     <mat-icon matSuffix class="text-muted">credit_card</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
@@ -28,25 +40,25 @@
                             </p>
 
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>Account Name</mat-label>
-                                    <input required matInput placeholder="Account Name">
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">Account Number</mat-label>
+                                    <input type="number" required matInput placeholder="Account Name">
                                     <mat-icon matSuffix class="text-muted">credit_card</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
                                 </mat-form-field>
                             </p>
 
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>Account Number</mat-label>
-                                    <input required matInput placeholder="Account Number">
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">Account Number</mat-label>
+                                    <input type="required" required matInput placeholder="Account Number">
                                     <mat-icon matSuffix class="text-muted">credit_card</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
                                 </mat-form-field>
                             </p>
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-rounded" mat-raised-button>
+                                    <button class="btn-rounded bg-darker-dark color-yellow" mat-raised-button>
                                Save  Changes
                            </button>
                                 </div>
@@ -56,17 +68,16 @@
                 </div>
 
                 <div class="col-lg-6 ml-auto animated fadeInUp delay-1s">
-                    <div class="card shadow-sm-fb border-0 mb-4">
+                    <div class="card border-0 mb-4  bg-dark-light shadow">
                         <div class="card-body ">
-
                             <div class="d-flex justify-content-between">
-                                <p class="title">Bitcoin</p>
-                                <mat-radio-button value="auto">Active</mat-radio-button>
+                                <p class="title text-white">Bitcoin</p>
+                                <mat-radio-button class="color-yellow" value="auto">Active</mat-radio-button>
                             </div>
 
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>BTC Address</mat-label>
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">BTC Address</mat-label>
                                     <input required matInput placeholder="BTC Address">
                                     <mat-icon matSuffix class="text-muted">format_bold</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
@@ -76,7 +87,7 @@
 
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-rounded" mat-raised-button>
+                                    <button class="btn-rounded bg-darker-dark color-yellow" mat-raised-button>
                                Save  Changes
                            </button>
                                 </div>
@@ -84,17 +95,17 @@
                         </div>
                     </div>
 
-                    <div class="card shadow-sm-fb border-0 mb-4">
+                    <div class="card border-0 mb-4 bg-dark-light shadow">
                         <div class="card-body ">
 
                             <div class="d-flex justify-content-between">
-                                <p class="title">Litecoin</p>
-                                <mat-radio-button value="auto">Active</mat-radio-button>
+                                <p class="title text-white">Litecoin</p>
+                                <mat-radio-button class="color-yellow" value="auto">Active</mat-radio-button>
                             </div>
 
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>LTC Address</mat-label>
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">LTC Address</mat-label>
                                     <input required matInput placeholder="BTC Address">
                                     <mat-icon matSuffix class="text-muted">attach_money</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
@@ -102,7 +113,7 @@
                             </p>
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-rounded" mat-raised-button>
+                                    <button class="btn-rounded bg-darker-dark color-yellow shadow" mat-raised-button>
                                Save  Changes
                            </button>
                                 </div>
@@ -111,26 +122,24 @@
                     </div>
 
 
-                    <div class="card shadow-sm-fb border-0 mb-4">
+                    <div class="card border-0 mb-4 shadow bg-dark-light">
                         <div class="card-body ">
-
                             <div class="d-flex justify-content-between">
-                                <p class="title">Ethereum</p>
-                                <mat-radio-button value="auto">Active</mat-radio-button>
+                                <p class="title text-white">Ethereum</p>
+                                <mat-radio-button class="color-yellow" value="auto">Active</mat-radio-button>
                             </div>
                             <p>
-                                <mat-form-field class="w-100">
-                                    <mat-label>ETH Addres</mat-label>
+                                <mat-form-field class="w-100" appearance="outline">
+                                    <mat-label class="text-muted">ETH Address</mat-label>
                                     <input required matInput placeholder="BTC Address">
                                     <mat-icon matSuffix class="text-muted">attach_money</mat-icon>
                                     <!-- <mat-hint>Hint</mat-hint> -->
                                 </mat-form-field>
                             </p>
 
-
                             <div class="d-flex justify-content-end">
                                 <div>
-                                    <button class="btn-rounded" mat-raised-button>
+                                    <button class="btn-rounded bg-darker-dark color-yellow shadow" mat-raised-button>
                                Save  Changes
                            </button>
                                 </div>

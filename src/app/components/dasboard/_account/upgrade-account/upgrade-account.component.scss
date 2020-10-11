@@ -15,14 +15,17 @@
         }
     }
     .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
-        border-color: #1aa15f;
+        border-color: $yellow;
     }
     .mat-radio-button.mat-accent .mat-radio-inner-circle {
-        color: #1aa15f;
-        background-color: #1aa15f;
+        color: $yellow;
+        background-color: $yellow;
     }
     .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
         background-color: rgb(255, 37, 37, .26);
+    }
+    .t-white {
+        color: #FFFFFF !important;
     }
     @media (min-width: 768px) {
         .container {

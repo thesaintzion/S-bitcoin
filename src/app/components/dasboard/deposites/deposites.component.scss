@@ -6,21 +6,44 @@
     .mat-icon {
         vertical-align: middle !important;
     }
-    .packages {
-        min-height: 100vh;
+    .deposit {
+        // min-height: 100vh;
         // background-color: $home_page_bg;
         .no-packages {
-            height: 100vh;
+            // height: 100vh;
             text-align: center;
             .mat-icon {
-                width: 70px;
-                height: 70px;
-                font-size: 70px;
+                width: 200px;
+                height: 200px;
+                font-size: 200px;
             }
             h3 {
                 font-size: 20px !important;
-                font-weight: 800 !important;
-                color: #000000 !important;
+                // font-weight: 800 !important;
+                // color: #000000 !important;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        .mat-card {
+            border-radius: 15px;
+            background-color: #eeeeee;
+            // background-color: #f8f8f8;
+            .mat-card-title {
+                // color: $yellow;
+            }
+            .price {
+                .mat-card-title {
+                    font-size: 40px;
+                    // color: $yellow;
+                    .mat-icon {
+                        width: 60px;
+                        height: 60px;
+                        font-size: 60px;
+                        // display: none;
+                    }
+                }
             }
         }
     }

@@ -60,6 +60,7 @@
     // link-box
     .link-box {
         background-image: linear-gradient(-60deg, $app_gray_dark, $app_gray_darker 90%) !important;
+        // background-image: linear-gradient(70deg, $app_gray_dark, $app_gray_light 90%) !important;
         height: 150px;
         box-shadow: 0 0 10px $app_gray_darker;
         // border: 3px solid $app_yellow_dark;
@@ -74,14 +75,9 @@
             font-size: 18px;
             opacity: 0.5;
         }
-        h3 {
-            // font-size: 14px;
-            // color: rgba(0, 0, 0, 0.4);
-            // margin-top: 25px;
-        }
         &:hover {
             cursor: pointer;
-            // background-image: linear-gradient(60deg, $app_gray_dark, $app_gray_darker 90%) !important;
+            background-image: linear-gradient(60deg, $app_gray_dark, $app_gray_dark 90%) !important;
             border-color: #fff !important;
             p {
                 opacity: 1;
@@ -94,29 +90,13 @@
             }
         }
     }
-    .link-box.active {
-        // background-color: #000;
-        // color: $yellow !important;
-        .mat-icon {
-            color: $yellow !important;
-        }
-        h3 {
-            color: $yellow;
-        }
-    }
     header.mobile-header {
         position: sticky;
         top: 0;
         z-index: 100;
         .mat-toolbar {
             height: 56px;
-            // background-color: transparent;
-            // background-color: $home_page_bg;
             .mat-icon {
-                // color: #dadfe6;
-                // font-size: 30px;
-                // width: 30px;
-                // height: 30px;
                 vertical-align: middle;
                 // color: red;
             }

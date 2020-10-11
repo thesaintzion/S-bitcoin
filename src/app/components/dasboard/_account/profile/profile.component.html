@@ -1,51 +1,27 @@
-<div class="profile pt-3">
+<header class="main-header d-flex justify-content-between mb-5">
+    <div class="start">
+        <h1 class="mb-0 text-bolder text-white">Complete Your Details
+        </h1>
+        <p class="mb-0 text-white">When you complete your profile info, you start to feel good 😍</p>
+    </div>
+</header>
+
+
+<div class="profile">
     <div class="container">
+        <div class="page-title mb-4">
+            <h3 class="color-yellow mb-0">Profile Settings</h3>
+        </div>
+
         <div class="row">
-            <div class="col-lg-8 animated fadeInUp">
-                <div class="card shadow-sm-fb border-0 mb-4">
-                    <div class="card-body ">
-                        <p class="title">Basic Info</p>
-                        <p>
-                            <mat-form-field class="w-100">
-                                <mat-label>First Name</mat-label>
-                                <input matInput placeholder="First Name" value="John">
-                                <mat-icon matSuffix class="text-muted">person</mat-icon>
-                                <mat-hint>Hint</mat-hint>
-                            </mat-form-field>
-                        </p>
-
-                        <p>
-                            <mat-form-field class="w-100">
-                                <mat-label>Last Name</mat-label>
-                                <input matInput placeholder="Last Name" value="Doe">
-                                <mat-icon matSuffix class="text-muted">person</mat-icon>
-                                <mat-hint>Hint</mat-hint>
-                            </mat-form-field>
-                        </p>
-
-                        <p>
-                            <mat-form-field class="w-100">
-                                <mat-label>Email</mat-label>
-                                <input matInput placeholder="Email" value="johndoe@gmail.com">
-                                <mat-icon matSuffix class="text-muted">email</mat-icon>
-                                <mat-hint>Hint</mat-hint>
-                            </mat-form-field>
-                        </p>
-                        <div class="d-flex justify-content-end">
-                            <div>
-                                <button class="btn-rounded" mat-raised-button>
-                               Save  Changes
-                           </button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-4 ml-auto animated fadeInUp delay-1s order-lg-2">
+                <div class="text-center ">
+                    <img width="150" height="150" class="mx-auto rounded-circle shadow" src="../../../../../assets/img/slide04.jpg">
                 </div>
-            </div>
-            <div class="col-lg-4 ml-auto animated fadeInUp delay-1s">
+                <div class="card shadow  bg-dark-light border-0 mb-4 d-none">
 
-                <div class="card shadow-sm-fb border-0 mb-4">
                     <div class="card-body ">
-                        <p class="title">Change Password</p>
+                        <p class="title text-white">Change Password</p>
                         <p>
                             <mat-form-field class="w-100">
                                 <mat-label>Old Password</mat-label>
@@ -74,7 +50,7 @@
                         </p>
                         <div class="d-flex justify-content-end">
                             <div>
-                                <button class="btn-rounded" mat-raised-button>
+                                <button class="btn-rounded bg-darker-dark color-yellow shadow" mat-raised-button>
                                Save  Changes
                            </button>
                             </div>
@@ -84,6 +60,51 @@
 
 
             </div>
+            <div class="col-lg-8 animated fadeInUp">
+                <div class="card shadow bg-dark-light border-0 mb-4">
+                    <div class="card-body ">
+                        <div class="d-flex justify-content-between mb-5">
+                            <p class="title text-white">Basic Info</p>
+                        </div>
+
+
+                        <p>
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label class="text-muted">First Name</mat-label>
+                                <input matInput placeholder="First Name" value="John">
+                                <mat-icon matSuffix class="text-muted">person</mat-icon>
+                                <mat-hint class="text-danger">Hint</mat-hint>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label class="text-muted">Last Name</mat-label>
+                                <input matInput placeholder="Last Name" value="Doe">
+                                <mat-icon matSuffix class="text-muted">person</mat-icon>
+                                <mat-hint>Hint</mat-hint>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label class="text-muted">Email</mat-label>
+                                <input matInput placeholder="Email" value="johndoe@gmail.com">
+                                <mat-icon matSuffix class="text-muted">email</mat-icon>
+                                <mat-hint>Hint</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <div class="d-flex justify-content-end">
+                            <div>
+                                <button class="btn-rounded bg-darker-dark color-yellow shadow" mat-raised-button>
+                               Save  Changes <mat-icon>arrow_right_alt</mat-icon>
+                           </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>

@@ -6,6 +6,11 @@
     .mat-icon {
         vertical-align: middle !important;
     }
+    .ddd {
+        width: 100%;
+        margin: 0 auto;
+        overflow-x: auto !important;
+    }
     .investment-plan {
         min-height: 100vh;
         // background-color: $home_page_bg;
@@ -16,6 +21,31 @@
             border-radius: 15px;
             background-color: #fff;
             // background-color: rgb(29, 29, 29);
+            background-size: cover;
+            background-position: center;
+            background-size: cover;
+            -webkit-background-size: cover;
+            overflow: hidden;
+            position: relative;
+            overflow: hidden;
+            /*below show how it works*/
+            .con {
+                background-color: aqua;
+                z-index: 99999999 !important;
+            }
+            // .bg {
+            //     content: "";
+            //     width: 200%;
+            //     height: 0;
+            //     padding-top: 200%;
+            //     border-radius: 100%;
+            //     background: #c2a160;
+            //     position: absolute;
+            //     top: 60%;
+            //     left: 50%;
+            //     z-index: 1 !important;
+            //     transform: translateX(-50%);
+            // }
             .mat-card-title {
                 // color: $yellow;
             }

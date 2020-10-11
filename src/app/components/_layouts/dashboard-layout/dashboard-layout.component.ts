@@ -62,11 +62,7 @@ export class DashboardLayoutComponent implements OnInit {
           // iconClass: 'text-success',
           iconClass: 'text-dark',
           link: 'packages'
-        }
-      ];
-
-  
-      this.others = [
+        },
         {
           name: 'Deposits',
           icon: 'add_box',
@@ -74,6 +70,18 @@ export class DashboardLayoutComponent implements OnInit {
           iconClass: 'text-dark',
           link: 'deposit'
         },
+        {
+          name: 'Support',
+          icon: 'contact_support',
+          // iconClass: 'text-success',
+          iconClass: 'text-dark',
+          link: 'support'
+        }
+      ];
+
+  
+      this.others = [
+      
         {
           name: 'Withdrawals',
           icon: 'monetization_on',
@@ -95,15 +103,8 @@ export class DashboardLayoutComponent implements OnInit {
           iconClass: 'text-dark',
           link: 'refer'
         },
-        {
-          name: 'Support',
-          icon: 'contact_support',
-          // iconClass: 'text-success',
-          iconClass: 'text-dark',
-          link: 'support'
-        }
         
-        
+  
       ];
 
        let items = [

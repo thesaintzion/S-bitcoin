@@ -1,19 +1,35 @@
-<!-- <div class="container overflow-hidden"> -->
+<header class="main-header d-flex justify-content-between mb-5">
+    <div class="start">
+        <h1 class="mb-0 text-bolder text-white">Evening, Saint</h1>
+        <p class="mb-0 text-white">Welcome to your own world 😎</p>
+    </div>
+    <div class="end d-flex justify-content-between align-items-center ">
 
-<!-- </div> -->
+        <div class="mr-4 d-none d-lg-block">
+            <div class="input-group bg-darker-light shadow rounded-10 py-1">
+                <input type="text" class="form-control bg-transparent border-0 " placeholder="Search something" aria-label="Amount (to the nearest dollar)">
 
-<!-- <app-loading-layout></app-loading-layout> -->
-<div class="dashboard-home pt-3">
+                <div class="input-group-append">
+                    <span class="input-group-text bg-transparent border-0">
+                        <mat-icon class="color-yellow">search</mat-icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button mat-fab class="bg-yellow-light profile-pic shadow ml-3" routerLink="/app/profile" matTooltip="Profile" matTooltipClass="bg-dark">
+
+        </button>
+    </div>
+</header>
+
+<div class="dashboard-home">
     <div class="container">
-        <!-- <section class="welcome-smg marquee">
-            <p>Welcome to Bitcoin Easy Platform</p>
-        </section> -->
         <div class="page-title mb-4">
             <h3 class="color-yellow mb-0">Overview</h3>
         </div>
 
-        <section class="welcome-smg">
-            <div class="d-lg-flex ddd overflow-x-auto no-gutters">
+        <section class="welcome-smg animated fadeInUp">
+            <div class="d-flex ddd overflow-x-auto no-gutters">
                 <div class="col-lg-3 col-sm-6 link-box-con  mr-4 md:mr-5 last:mr-0 mb-4 ">
                     <mat-card routerLink="transaction-logs" class="shadow link-box">
                         <div class="link-box-text d-flex align-items-center h-100">

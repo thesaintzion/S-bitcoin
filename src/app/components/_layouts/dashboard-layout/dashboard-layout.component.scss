@@ -71,24 +71,23 @@
     .mat-list-base .mat-list-item .mat-list-item-content {
         padding-left: 15px;
         padding-right: 15px;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        border-radius: 10px;
+        margin-bottom: 40px !important;
         .mat-list-text {
             color: #343a40;
             font-weight: bolder !important;
         }
         &:hover {
-            // background-color: rgb(20, 20, 20) !important;
+            background-color: $app_gray_dark !important;
             opacity: 1;
-            .mat-list-text {
-                // color: gray !important;
-                // background-color: gray !important;
-            }
         }
     }
     .mat-sidenav-content {
         padding-top: 100px;
-        background-image: linear-gradient(to right, $app_gray_dark, $app_gray_darker 90%);
-        // background-image: linear-gradient($app_gray_dark, $app_gray_darker 90%);
-        // background-image: linear-gradient($app_gray_dark, $app_gray_darker 100%);
+        background-image: linear-gradient(-70deg, $app_gray_darker, $app_gray_dark 90%) !important;
+        // background-color: $app_gray_dark;
         border-top-left-radius: 30px;
         height: 100vh;
         header.main-header {
@@ -105,17 +104,25 @@
             }
         }
         footer.main-footer {
-            display: none;
             position: fixed;
             width: calc(100vw - 300px);
             right: 0;
             z-index: 9999;
             bottom: 0;
             z-index: 100;
-            .mat-toolbar {
-                height: 50px;
-                background-color: $app_gray_light !important;
+            padding: 0;
+            overflow-y: hidden;
+            overflow-x: auto;
+            margin: 0 auto;
+            background-color: $app_gray_darker !important;
+            .mat-fab {
+                border-radius: 0 !important;
+                background-color: transparent !important;
+                color: #ffffff;
+                border-bottom: 3px solid transparent;
+                box-shadow: none !important;
             }
+            display: none;
         }
     }
     .add-btn {
@@ -163,7 +170,7 @@
         }
          ::-webkit-scrollbar,
          ::-webkit-scrollbar-thumb {
-            width: 7px;
+            width: 10px;
             border-radius: 10px;
             background-clip: padding-box;
             height: 10px;
@@ -177,6 +184,7 @@
         footer.main-footer {
             width: 100% !important;
             z-index: 9999;
+            display: block;
         }
         .sidenav-container {
             .logo {

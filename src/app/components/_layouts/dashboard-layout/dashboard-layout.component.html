@@ -35,11 +35,11 @@
             </a>
 
 
-            <!-- <a (click)="closeMen(drawer)" [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
+            <a (click)="closeMen(drawer)" [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
                 <mat-icon mat-list-icon [ngClass]="other.iconClass">{{other.icon}}</mat-icon>
 
                 <div mat-line>{{other.name}}</div>
-            </a> -->
+            </a>
         </mat-list>
 
 
@@ -55,69 +55,29 @@
 
 
     <mat-sidenav-content class="position-relative shadow" [ngClass]="isHandset? '': ''">
-        <header class="main-header d-flex justify-content-between mb-5">
-            <div class="start">
-                <h1 class="mb-0 text-bolder text-white">Evening, Saint</h1>
-                <p class="mb-0 text-white">Welcome to your own world 😎</p>
-            </div>
-
-            <div class="end d-flex justify-content-between align-items-center ">
-
-                <div class="mr-4" *ngIf="!isHandset">
-                    <div class="input-group bg-darker-light shadow rounded-10 py-1">
-                        <input type="text" class="form-control bg-transparent border-0 " placeholder="Search something" aria-label="Amount (to the nearest dollar)">
-
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent border-0">
-                                <mat-icon class="color-yellow">search</mat-icon>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <button mat-fab class="bg-yellow-light profile-pic shadow ml-3" matTooltip="Add New Property" matTooltipClass="bg-dark">
-    <!-- <mat-icon class="color-darker">person</mat-icon> -->
-                </button>
-            </div>
-        </header>
-
         <div>
             <router-outlet>
             </router-outlet>
         </div>
+        <footer class="main-footer d-none d-sm-flex overflow-x-auto">
 
+            <button routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}" routerLink="/app" class="mr-3 last:mr-0  shadow-0" mat-fab>
+                    <mat-icon class="text-bolder">home</mat-icon>
+            </button>
 
+            <button routerLinkActive="active" [routerLink]="page.link" *ngFor="let page of account" class="mr-3 last:mr-0 shadow-0" mat-fab>
+                    <mat-icon class="text-bolder">{{page.icon}}</mat-icon>
+            </button>
 
-        <footer class="main-footer">
-            <mat-toolbar class="d-flex justify-content-between shadow">
+            <button routerLinkActive="active" [routerLink]="page.link" *ngFor="let page of plans" class="mr-3 last:mr-0 shadow-0" mat-fab>
+                <mat-icon class="text-bolder">{{page.icon}}</mat-icon>
+            </button>
 
-                <div class="start">
-                    <button mat-icon-button matTooltip="Add New Property" matTooltipClass="bg-dark">
-                        <mat-icon class="text-bolder">add</mat-icon>
-                    </button>
-                </div>
-
-                <div class="middle">
-                    <button mat-fab matTooltip="Add New Property" matTooltipClass="bg-dark">
-        <mat-icon class="text-bolder">add</mat-icon>
-    </button>
-                </div>
-
-                <div class="end">
-                    <button mat-icon-button matTooltip="Add New Property" matTooltipClass="bg-dark">
-        <mat-icon class="text-bolder">add</mat-icon>
-    </button>
-                </div>
-            </mat-toolbar>
+            <button routerLinkActive="active" [routerLink]="page.link" *ngFor="let page of others" class="mr-3 last:mr-0 shadow-0" mat-fab>
+                <mat-icon class="text-bolder">{{page.icon}}</mat-icon>
+            </button>
         </footer>
-
-        <!-- <footer class="px-4 mt-5">
-            <p> &copy; Bitcoin App, 2020</p>
-        </footer> -->
-
-
 
     </mat-sidenav-content>
 </mat-sidenav-container>
