@@ -7,13 +7,58 @@ $pink: #FD287B;
 $orange:#FF7058;
 $home_page_bg: #C4C4C4;
 $dashbord_bg:#F5F7FA;
-$yellow: #f3cb00;
+$yellow: #c2a160;
+$app_gray_light: #485466;
+$app_gray_dark: #313b46;
+$app_gray_darker: #1d232a;
+$app_yellow_light:#b05532;
+$app_yellow_dark:#6b4d23;
+.app-bg-dark {
+    background-color: $app_gray_dark !important;
+}
+
+.app-bg-darker {
+    background-color: $app_gray_darker !important;
+}
+
+.bg-dark-darker {
+    background-image: linear-gradient(to right, $app_gray_dark, $app_gray_darker 90%) !important;
+}
+
+.bg-darker-dark {
+    background-image: linear-gradient(to right, $app_gray_darker, $app_gray_dark 90%) !important;
+}
+
+.bg-darker-light {
+    background-image: linear-gradient(to right, $app_gray_darker, $app_gray_dark 90%) !important;
+}
+
 .bg-yellow {
     background-color: $yellow !important;
 }
 
+.bg-yellow-dark {
+    background-color: $app_yellow_dark !important;
+}
+
+.bg-yellow-light {
+    background-color: $app_yellow_light !important;
+}
+
 .color-yellow {
     color: $yellow !important;
+}
+
+.color-yellow-dark {
+    color: $app_yellow_dark !important;
+}
+
+.color-darker {
+    color: $app_gray_darker !important;
+}
+
+.color-dark {
+    color: $app_gray_dark !important;
 }
 
 .color-pink {
@@ -179,10 +224,6 @@ table td {
     color: $yellow !important;
 }
 
-.bg-yellow {
-    background-image: linear-gradient(160deg, #ffc107 0, $yellow 100%)!important;
-}
-
 .btn-rounded {
     border-radius: 100px !important;
 }
@@ -220,13 +261,37 @@ button:focus {
     padding-top: 0 !important;
 }
 
+.rounded-10 {
+    border-radius: 10px !important;
+}
+
+// .mat-list .active {
+//     // border-left: 3px solid $yellow !important;
+//     .mat-icon {
+//         color: #f8f8f8 !important;
+//     }
+//     .mat-list-text {
+//         color: #f8f8f8 !important;
+//     }
+// }
 .mat-list .active {
-    // border-left: 3px solid $yellow !important;
     .mat-icon {
-        color: #f8f8f8 !important;
+        color: $yellow !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 30px !important;
+        padding: 5px !important;
+        // background-image: linear-gradient(to bottom, $app_gray_darker, $app_gray_dark 90%) !important;
     }
-    .mat-list-text {
-        color: #f8f8f8 !important;
+    .mat-list-item-content {
+        background-image: linear-gradient(to right, $app_gray_darker, $app_gray_dark 90%) !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        border-radius: 10px;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, .15)!important;
+        .mat-list-text {
+            color: $yellow !important;
+        }
     }
 }
 

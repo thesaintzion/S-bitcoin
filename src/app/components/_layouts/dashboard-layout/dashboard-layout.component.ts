@@ -14,6 +14,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./dashboard-layout.component.scss']
 })
 export class DashboardLayoutComponent implements OnInit {
+  
   fancyBg = true;
   items = [];
   isHandset$: Observable<boolean>
@@ -33,7 +34,7 @@ export class DashboardLayoutComponent implements OnInit {
 
       this.account = [
         {
-          name: 'Profile Settings',
+          name: 'Profile',
           icon: 'person',
           // iconClass: 'text-primary',
           iconClass: 'text-dark',
@@ -56,7 +57,7 @@ export class DashboardLayoutComponent implements OnInit {
           link: 'investment-plans'
         },
         {
-          name: 'My Packages',
+          name: 'Packages',
           icon: 'card_giftcard',
           // iconClass: 'text-success',
           iconClass: 'text-dark',
@@ -67,11 +68,11 @@ export class DashboardLayoutComponent implements OnInit {
   
       this.others = [
         {
-          name: 'Deposites',
+          name: 'Deposits',
           icon: 'add_box',
           // iconClass: 'text-warning',
           iconClass: 'text-dark',
-          link: 'deposite'
+          link: 'deposit'
         },
         {
           name: 'Withdrawals',
@@ -81,14 +82,14 @@ export class DashboardLayoutComponent implements OnInit {
           link: 'withdrawals'
         },
         {
-          name: 'Transaction Logs',
+          name: 'Transactions',
           icon: 'cached',
           // iconClass: 'text-warning',
           iconClass: 'text-dark',
           link: 'transaction-logs'
         },
         {
-          name: 'Refer a User',
+          name: 'Refer',
           icon: 'group',
           // iconClass: 'text-primary',
           iconClass: 'text-dark',
@@ -141,7 +142,7 @@ export class DashboardLayoutComponent implements OnInit {
 
   // 
   setHeader(){
-    this.title.setTitle('ChatApp');
+    // this.title.setTitle('ChatApp');
     this.meta.updateTag({ name: 'description', content: 'Welcome back to'});
     this.meta.updateTag({ name: 'theme-color', content: '#f3cb00'});
   }

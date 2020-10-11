@@ -1,6 +1,5 @@
 .profile {
     min-height: 100vh;
-    background-color: #f0f2f5;
     .mat-icon {
         vertical-align: middle;
     }
@@ -15,5 +14,14 @@
             font-weight: 800 !important;
             color: #000000;
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 60px;
+        ;
+        padding-right: 60px;
+        ;
     }
 }

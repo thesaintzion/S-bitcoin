@@ -1,7 +1,7 @@
 :host ::ng-deep {
     $home_page_bg: #C4C4C4;
     $dashbord_bg: #F5F7FA;
-    $yellow: #f3cb00;
+    $yellow: #c2a160;
     // Globa
     .mat-icon {
         vertical-align: middle !important;
@@ -34,6 +34,14 @@
             button {
                 // background-color: ;
             }
+        }
+    }
+    @media (min-width: 768px) {
+        .container {
+            padding-left: 60px;
+            ;
+            padding-right: 60px;
+            ;
         }
     }
 }

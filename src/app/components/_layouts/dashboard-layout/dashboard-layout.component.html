@@ -1,20 +1,20 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav shado bor" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
-        <mat-toolbar class="shadow-sm pl-0 pr-0">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+        <header class="sidenav-header">
             <div class="d-flex justify-content-between align-items-center align-content-center w-100">
                 <div>
                     <a mat-list-item>
-                        <img class="logo" mat-line src="assets/img/logo-1.svg">
-                        <span mat-line class="text-white logo-name">Bulb <span  class="text-yellow">Finance</span></span>
+                        <!-- <img class="logo" mat-line src="assets/img/logo-1.svg"> -->
+                        <h3 mat-line class="text-white logo-name">Bulb Finance</h3>
                     </a>
                 </div>
                 <div>
-                    <button mat-icon-button>
-                        <mat-icon>more_vert</mat-icon>
+                    <button class="bg-yellow" mat-icon-button>
+                        <mat-icon>menu</mat-icon>
                     </button>
                 </div>
             </div>
-        </mat-toolbar>
+        </header>
 
         <mat-list>
             <a (click)="closeMen(drawer)" mat-list-item routerLinkActive="active" [routerLinkActiveOptions]="{exact:
@@ -35,12 +35,11 @@
             </a>
 
 
-
-            <a (click)="closeMen(drawer)" [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
+            <!-- <a (click)="closeMen(drawer)" [routerLink]="other.link" routerLinkActive="active" mat-list-item *ngFor="let other of others">
                 <mat-icon mat-list-icon [ngClass]="other.iconClass">{{other.icon}}</mat-icon>
 
                 <div mat-line>{{other.name}}</div>
-            </a>
+            </a> -->
         </mat-list>
 
 
@@ -55,57 +54,33 @@
 
 
 
-    <mat-sidenav-content class="position-relative" [ngClass]="isHandset? '': ''">
+    <mat-sidenav-content class="position-relative shadow" [ngClass]="isHandset? '': ''">
+        <header class="main-header d-flex justify-content-between mb-5">
+            <div class="start">
+                <h1 class="mb-0 text-bolder text-white">Evening, Saint</h1>
+                <p class="mb-0 text-white">Welcome to your own world 😎</p>
+            </div>
 
+            <div class="end d-flex justify-content-between align-items-center ">
 
+                <div class="mr-4" *ngIf="!isHandset">
+                    <div class="input-group bg-darker-light shadow rounded-10 py-1">
+                        <input type="text" class="form-control bg-transparent border-0 " placeholder="Search something" aria-label="Amount (to the nearest dollar)">
 
-        <header class="mian-header">
-            <mat-toolbar>
-                <div class="d-flex justify-content-between align-items-center  w-100">
-                    <div class="d-flex justify-content-betwe" *ngIf="isHandset$ | async">
-                        <button tabindex="-1" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
-                        <mat-icon class="text-yellow" aria-label="Side nav toggle icon">menu</mat-icon>
-                        </button>
-                    </div>
-
-
-                    <div *ngIf="!isHandset">
-                        <div class="input-group">
-
-                            <div class="input-group-prepend">
-                                <span class="input-group-text bg-dark border-0">
-                                        <mat-icon class="">search</mat-icon>
-                                </span>
-                            </div>
-
-
-                            <input class="form-control bg-dark border-0" placeholder="Search something">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-transparent border-0">
+                                <mat-icon class="color-yellow">search</mat-icon>
+                            </span>
                         </div>
                     </div>
-
-
-                    <div *ngIf="isHandset">
-                        <span>
-                            <a mat-list-item>
-                                <img class="logo" mat-line src="https://thesaintzion.github.io/S-bitcoin/assets/img/logo-1.svg">
-                              </a>
-                          </span>
-                    </div>
-
-                    <div>
-                        <button routerLink="profile" tabindex="-1" [ngClass]="isHandset? 'bg-transparent pr-0  text-right' : 'bg-dark ml-3 '" class="pl-0 text-left btn-rounded text-danger" mat-raised-button>
-                        <button  tabindex="-1" [ngClass]="isHandset? 'bg-transparent text-yellow' : 'bg-dark text-muted'" class="" mat-icon-button mat-raised-button routerLink="profile">
-                        <mat-icon >person</mat-icon>
-                        </button>
-                        <span *ngIf="!isHandset" class="text-success ml-3">Hi, John Doe</span>
-                        </button>
-                        <button tabindex="-1" *ngIf="!isHandset" class="ml-5 btn-rounded bg-dark text-danger" routerLink="/app" mat-raised-button>
-                        <mat-icon>power_settings_new</mat-icon> Logout
-                    </button>
-                    </div>
-
                 </div>
-            </mat-toolbar>
+
+
+
+                <button mat-fab class="bg-yellow-light profile-pic shadow ml-3" matTooltip="Add New Property" matTooltipClass="bg-dark">
+    <!-- <mat-icon class="color-darker">person</mat-icon> -->
+                </button>
+            </div>
         </header>
 
         <div>
@@ -114,9 +89,33 @@
         </div>
 
 
-        <footer class="px-4 mt-5">
-            <p> &copy; Bitcoin App, 2020</p>
+
+        <footer class="main-footer">
+            <mat-toolbar class="d-flex justify-content-between shadow">
+
+                <div class="start">
+                    <button mat-icon-button matTooltip="Add New Property" matTooltipClass="bg-dark">
+                        <mat-icon class="text-bolder">add</mat-icon>
+                    </button>
+                </div>
+
+                <div class="middle">
+                    <button mat-fab matTooltip="Add New Property" matTooltipClass="bg-dark">
+        <mat-icon class="text-bolder">add</mat-icon>
+    </button>
+                </div>
+
+                <div class="end">
+                    <button mat-icon-button matTooltip="Add New Property" matTooltipClass="bg-dark">
+        <mat-icon class="text-bolder">add</mat-icon>
+    </button>
+                </div>
+            </mat-toolbar>
         </footer>
+
+        <!-- <footer class="px-4 mt-5">
+            <p> &copy; Bitcoin App, 2020</p>
+        </footer> -->
 
 
 

@@ -1,9 +1,8 @@
 :host ::ng-deep {
     $dashbord_bg: #f0f2f5;
-    $yellow: #f3cb00;
+    $yellow: #c2a160;
     .upgrade-account {
         min-height: 100vh;
-        background-color: #f0f2f5;
         .mat-icon {
             vertical-align: middle;
         }
@@ -24,5 +23,11 @@
     }
     .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
         background-color: rgb(255, 37, 37, .26);
+    }
+    @media (min-width: 768px) {
+        .container {
+            padding-left: 60px;
+            padding-right: 60px;
+        }
     }
 }

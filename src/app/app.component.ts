@@ -10,6 +10,7 @@ import {
   NavigationStart,
   Router
 } from '@angular/router';
+
 import { SharedService } from './services/shared.service';
 
 @Component({
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
     private titleService: Title, 
     private activatedRoute: ActivatedRoute,
     public sharedService: SharedService ){
+
     this.router.events.subscribe((event: Event) => {
       switch (true) {
         case event instanceof NavigationStart: {

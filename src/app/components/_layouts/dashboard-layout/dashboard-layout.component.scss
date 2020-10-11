@@ -1,7 +1,10 @@
 :host ::ng-deep {
     $home_page_bg: #C4C4C4;
     $dashbord_bg: #F5F7FA;
-    $yellow: #f3cb00;
+    $yellow: #c2a160;
+    $app_gray_light: #485466;
+    $app_gray_dark: #313b46;
+    $app_gray_darker: #1d232a;
     a {
         text-decoration: none !important;
         &:hover {
@@ -10,7 +13,9 @@
     }
     // overrides
     .sidenav-container {
-        height: 100%;
+        // height: 100%;
+        background-color: $app_gray_light !important;
+        background-image: linear-gradient(to top, #2e3640, $app_gray_light 90%) !important;
         .logo {
             width: 35px;
             height: 35px;
@@ -25,18 +30,17 @@
     //     overflow-y: scroll;
     // }
     .sidenav {
+        padding-top: 40px;
+        padding-right: 30px;
+        padding-left: 30px;
         width: 300px;
         border: 0 !important;
-        overflow-x: hidden;
-        background-color: #000;
-        // background-color: transparent;
-        // background-color: #f0f2f5;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0;
+        background-color: transparent !important;
+        height: 100vh;
         border: 0;
-        .mat-toolbar {
-            height: 56px;
-            background-color: #000;
-            color: $yellow;
+        header.sidenav-header {
+            background-color: transparent !important;
+            margin-bottom: 40px;
         }
         .sidenav-action {
             position: absolute;
@@ -46,12 +50,22 @@
         }
         .mat-list {
             .mat-icon {
-                // color: $home_page_bg !important;
+                color: $yellow !important;
+                width: 30px !important;
+                height: 30px !important;
+                font-size: 30px !important;
+                // border-radius: 10px !important;
+                // background-image: linear-gradient(to bottom, $app_gray_darker, $app_gray_dark 90%) !important;
             }
         }
         .mat-list-item .mat-button-wrapper {
             margin-left: 0 !important;
             // display: none;
+        }
+        .mat-list-text {
+            color: #fff !important;
+            // font-size: 14px;
+            font-weight: 600 !important;
         }
     }
     .mat-list-base .mat-list-item .mat-list-item-content {
@@ -62,8 +76,7 @@
             font-weight: bolder !important;
         }
         &:hover {
-            // background-color: transparent;
-            background-color: rgb(20, 20, 20) !important;
+            // background-color: rgb(20, 20, 20) !important;
             opacity: 1;
             .mat-list-text {
                 // color: gray !important;
@@ -72,25 +85,36 @@
         }
     }
     .mat-sidenav-content {
-        //   background-color:#f0f2f5;
-        // background-color: #ffffff;
-        background-color: #f0f2f5;
-        header.mian-header {
-            position: sticky;
+        padding-top: 100px;
+        background-image: linear-gradient(to right, $app_gray_dark, $app_gray_darker 90%);
+        // background-image: linear-gradient($app_gray_dark, $app_gray_darker 90%);
+        // background-image: linear-gradient($app_gray_dark, $app_gray_darker 100%);
+        border-top-left-radius: 30px;
+        height: 100vh;
+        header.main-header {
+            background-color: transparent;
+            width: 100%;
+            right: 0;
+            z-index: 9999;
             top: 0;
+            padding-right: 60px;
+            padding-left: 60px;
+            z-index: 100;
+            .profile-pic {
+                border: 5px solid #fff;
+            }
+        }
+        footer.main-footer {
+            display: none;
+            position: fixed;
+            width: calc(100vw - 300px);
+            right: 0;
+            z-index: 9999;
+            bottom: 0;
             z-index: 100;
             .mat-toolbar {
-                height: 56px;
-                // background-color: transparent;
-                background-color: #000;
-                .mat-icon {
-                    // color: #dadfe6;
-                    // font-size: 30px;
-                    // width: 30px;
-                    // height: 30px;
-                    // vertical-align: middle;
-                    // color: red;
-                }
+                height: 50px;
+                background-color: $app_gray_light !important;
             }
         }
     }
@@ -134,9 +158,6 @@
         // }
     }
     @media (min-width: 768px) {
-        // .sidenav {
-        //     width: 100%;
-        // }
         .hide-desktop {
             display: none !important;
         }
@@ -145,7 +166,7 @@
             width: 7px;
             border-radius: 10px;
             background-clip: padding-box;
-            height: 5px;
+            height: 10px;
             background-color: #d8d9da;
         }
          ::-webkit-scrollbar-thumb {
@@ -153,15 +174,22 @@
         }
     }
     @media (max-width: 767px) {
+        footer.main-footer {
+            width: 100% !important;
+            z-index: 9999;
+        }
         .sidenav-container {
             .logo {
                 width: 30px;
                 height: 30px;
             }
         }
-        header.mian-header {
-            .mat-toolbar {
-                // background-color: #343a40;
+        .mat-sidenav-content {
+            padding-top: 50px !important;
+            border-top-left-radius: 0 !important;
+            header.main-header {
+                padding-right: 15px;
+                padding-left: 15px !important;
             }
         }
     }
