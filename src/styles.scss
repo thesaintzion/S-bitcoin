@@ -250,6 +250,17 @@ table td {
     background-color: #fafafa;
 }
 
+.reg-btn {
+    background-color: $app_gray_light;
+    color: $yellow;
+    font-weight: bold !important;
+    // font-size: 30px !important;
+    &:hover {
+        background-color: $app_gray_dark;
+        color: $yellow;
+    }
+}
+
 button:focus {
     outline: 1px dotted;
     outline: none !important;
@@ -340,6 +351,12 @@ footer.main-footer {
 
 // Responsive
 @media (min-width: 768px) {
+    .w-lg-50 {
+        width: 50% !important;
+    }
+    .w-lg-30 {
+        width: 30%;
+    }
     .hide-desktop {
         display: none !important;
     }

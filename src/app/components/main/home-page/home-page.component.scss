@@ -1,5 +1,12 @@
 :host ::ng-deep {
     $yellow: #c2a160;
+    main {
+        height: 100vh !important;
+        h1 {
+            font-size: 100px !important;
+            font-weight: 900 !important;
+        }
+    }
     .home-slide-con {
         .carousel-caption {
             // text-align: left !important;
@@ -63,6 +70,16 @@
     @media (min-width: 768px) {}
     @media (max-width: 991.93px) {}
     @media (max-width: 767.93px) {
+        main {
+            // height: 100vh !important;
+            h1 {
+                font-size: 60px !important;
+                font-weight: 900 !important;
+            }
+            button {
+                width: 100% !important;
+            }
+        }
         .carousel-caption {
             text-align: left !important;
             h3 {

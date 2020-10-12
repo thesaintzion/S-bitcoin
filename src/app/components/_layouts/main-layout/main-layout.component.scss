@@ -1,17 +1,49 @@
 :host ::ng-deep {
+    $yellow: #c2a160;
+    $app_gray_light: #485466;
+    $app_gray_dark: #313b46;
+    $app_gray_darker: #1d232a;
     .main-layout {
         height: 100vh;
         // background-image: url('../../../../assets/img/undraw_digital_currency_qpak\ 1.svg');
+        background-color: $app_gray_light !important;
+        // background-image: linear-gradient(to top, #2e3640, $app_gray_light 90%) !important;
+        // background-color: #ffffff;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        overflow: hidden;
+        position: relative;
+        /*below show how it works*/
+        &:after {
+            // content: "";
+            // width: 200%;
+            // height: 0;
+            // padding-top: 200%;
+            // border-radius: 100%;
+            // background: $app_gray_dark;
+            // // background: $app-blue;
+            // position: absolute;
+            // top: 70%;
+            // left: 50%;
+            // transform: translateX(-50%);
+        }
         header {
             position: fixed;
             width: 100%;
             z-index: 100;
             .mat-toolbar {
                 height: 54px !important;
-                background-color: rgb(0, 0, 0, 0.9);
+                background-color: #ffffff;
+                // background-image: linear-gradient(-70deg, $app_gray_darker, $app_gray_dark 90%) !important;
+            }
+            .mat-button {
+                // font-size: 40px !important;
+                // display: none;
             }
         }
         .home-logo {
@@ -36,7 +68,7 @@
                 }
                 .mat-toolbar {
                     // height: 54px !important;
-                    background-color: #000;
+                    // background-color: #000;
                 }
             }
             header .container-fluid {
